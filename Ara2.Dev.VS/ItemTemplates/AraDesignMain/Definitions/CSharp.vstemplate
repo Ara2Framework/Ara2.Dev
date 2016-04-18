@@ -1,0 +1,29 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <ProjectType>CSharp</ProjectType>
+    
+    <DefaultName>Default</DefaultName>
+    <Name>AraDesignMain</Name>
+    <Description>Canvas Main (Pagina inicial que envia o AraKernel) no MVC pode ser chamado de controller</Description>    
+    <Icon>icon.png</Icon>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <TemplateID>f4c2f594-c3d3-4c82-a332-81aa5fb4af4f</TemplateID>
+    <SortOrder>1000</SortOrder>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+
+    <ProjectItem TargetFileName="$fileinputname$.AraDesign" ReplaceParameters="true">
+      Modelo/FrmMain.AraDesign
+    </ProjectItem>
+    <ProjectItem TargetFileName="$fileinputname$.aspx" ReplaceParameters="true">
+      Modelo/Default.aspx
+    </ProjectItem>
+    
+    <ProjectItem TargetFileName="$fileinputname$.aspx.cs" ReplaceParameters="true">
+      Modelo/Default.aspx.cs
+    </ProjectItem>
+    
+          
+  </TemplateContent>
+</VSTemplate>

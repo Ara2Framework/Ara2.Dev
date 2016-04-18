@@ -1,0 +1,384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7553CEE1-752E-46CB-BA89-FF42E870A612}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ara2.Dev.Teste</RootNamespace>
+    <AssemblyName>Ara2.Dev.Teste</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ara2, Version=1.2.6.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.1.2.6.2\lib\net40\Ara2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraButton, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraButton.1.0.0.2\lib\net40\Ara2.AraButton.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraCheckbox, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraCheckbox.1.0.0.1\lib\net40\Ara2.AraCheckbox.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraDiv, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraDiv.1.0.0.2\lib\net40\Ara2.AraDiv.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraGrid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraGrid.1.0.0.0\lib\net40\Ara2.AraGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraGridOfIcons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraGridOfIcons.1.0.0.0\lib\net40\Ara2.AraGridOfIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraIFrame, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraIFrame.1.0.0.0\lib\net40\Ara2.AraIFrame.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraImage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraImage.1.0.0.0\lib\net40\Ara2.AraImage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraLabel, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraLabel.1.0.0.1\lib\net40\Ara2.AraLabel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraMenu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraMenu.1.0.0.0\lib\net40\Ara2.AraMenu.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraProgressBar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraProgressBar.1.0.0.0\lib\net40\Ara2.AraProgressBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraRadio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraRadio.1.0.0.0\lib\net40\Ara2.AraRadio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraSelect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraSelect.1.0.0.0\lib\net40\Ara2.AraSelect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraSplitContainers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraSplitContainers.1.0.0.0\lib\net40\Ara2.AraSplitContainers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraTable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraTable.1.0.0.0\lib\net40\Ara2.AraTable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraTabs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraTabs.1.0.0.0\lib\net40\Ara2.AraTabs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraTextArea, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraTextArea.1.0.0.0\lib\net40\Ara2.AraTextArea.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraTextBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraTextBox.1.0.0.0\lib\net40\Ara2.AraTextBox.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraTimer, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraTimer.1.0.0.1\lib\net40\Ara2.AraTimer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraWindow, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraWindow.1.0.0.3\lib\net40\Ara2.AraWindow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.Components.Upload, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.Upload.1.0.0.0\lib\net40\Ara2.Components.Upload.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.ToolsExtension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.ToolsExtension.1.0.0.0\lib\net40\Ara2.ToolsExtension.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ara2\Components\AraButton\AraButton.js" />
+    <Content Include="Ara2\Components\AraCheckbox\AraCheckbox.js" />
+    <Content Include="Ara2\Components\AraDiv\AraDiv.js" />
+    <Content Include="Ara2\Components\AraGridOfIcons\AraGridOfIcons.js" />
+    <Content Include="Ara2\Components\AraGrid\AraGrid.js" />
+    <Content Include="Ara2\Components\AraGrid\files\grid_locale-pt-br.js" />
+    <Content Include="Ara2\Components\AraGrid\files\jquery_jqGrid_min.js" />
+    <Content Include="Ara2\Components\AraGrid\files\jquery_jqGrid_src.js" />
+    <Content Include="Ara2\Components\AraGrid\files\ui_jqgrid.css" />
+    <Content Include="Ara2\Components\AraGrid\files\ui_jqgrid_Ara2.css" />
+    <Content Include="Ara2\Components\AraIFrame\AraIFrame.js" />
+    <Content Include="Ara2\Components\AraImage\AraImage.js" />
+    <Content Include="Ara2\Components\AraLabel\AraLabel.js" />
+    <Content Include="Ara2\Components\AraMenu\AraMenu.js" />
+    <Content Include="Ara2\Components\AraMenu\files\fg_menu.css" />
+    <Content Include="Ara2\Components\AraMenu\files\fg_menu.js" />
+    <Content Include="Ara2\Components\AraMenu\files\fg_menu_add.css" />
+    <Content Include="Ara2\Components\AraProgressBar\AraProgressBar.js" />
+    <Content Include="Ara2\Components\AraRadio\AraRadio.js" />
+    <Content Include="Ara2\Components\AraSelect\AraSelect.js" />
+    <Content Include="Ara2\Components\AraSplitContainers\AraSplitContainers.js" />
+    <Content Include="Ara2\Components\AraTable\AraTable.js" />
+    <Content Include="Ara2\Components\AraTable\td\AraTableTd.js" />
+    <Content Include="Ara2\Components\AraTable\tr\AraTableTr.js" />
+    <Content Include="Ara2\Components\AraTabs\AraTabs.js" />
+    <Content Include="Ara2\Components\AraTextBox\AraTextBox.js" />
+    <Content Include="Ara2\Components\AraTimer\AraTimer.js" />
+    <Content Include="Ara2\Components\AraUpload\AraUpload.js" />
+    <Content Include="Ara2\Components\AraUpload\files\fileuploader.css" />
+    <Content Include="Ara2\Components\AraUpload\files\fileuploader.js" />
+    <Content Include="Ara2\Components\AraUpload\files\fileuploader.min.js" />
+    <Content Include="Ara2\Components\AraUpload\files\loading.gif" />
+    <Content Include="Ara2\Components\AraWindowTaskBar\AraWindowTaskbar.js" />
+    <Content Include="Ara2\Components\AraWindow\AraWindow.js" />
+    <Content Include="Ara2\Components\AraWindow\AraWindows.js" />
+    <Content Include="Ara2\Components\WindowMain\WindowMain.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAra.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraAnchor.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraClass.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraComponent.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraGenVarSend.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraHttps.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraTick.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraTools.js" />
+    <Content Include="Ara2\Files\AraKernel\other\ie7\ie7-squish.js" />
+    <Content Include="Ara2\Files\AraKernel\other\ie7\IE7.js" />
+    <Content Include="Ara2\Files\AraKernel\other\ie7\IE8.js" />
+    <Content Include="Ara2\Files\AraKernel\other\ie7\IE9.js" />
+    <Content Include="Ara2\Files\AraKernel\other\jquery_printElement.js" />
+    <Content Include="Ara2\Files\AraKernel\other\jquery_selectboxes.js" />
+    <Content Include="Ara2\Files\AraKernel\other\json2.js" />
+    <Content Include="Ara2\Files\AraScrollBar\AraScrollBar.js" />
+    <Content Include="Ara2\Files\BrowserNotSupported\BrowserNotSupported.html" />
+    <Content Include="Ara2\Files\Carregando.gif" />
+    <Content Include="Ara2\Files\JQueryScoolBar\jquery_nicescroll.js" />
+    <Content Include="Ara2\Files\jQuery\css\AraJQuery.css" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\jquery-ui_min.css" />
+    <Content Include="Ara2\Files\jQuery\css\images\ui-anim_basic_16x16.gif" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\jquery-ui-1_9_2_custom.css" />
+    <Content Include="Ara2\Files\jQuery\jquery-1_11_1_min.js" />
+    <Content Include="Ara2\Files\jQuery\jquery-cookie.js" />
+    <Content Include="Ara2\Files\jQuery\jquery-migrate-1_2_1_min.js" />
+    <Content Include="Ara2\Files\jQuery\jquery-ui-1_11_2_custom_min.js" />
+    <Content Include="Ara2\Files\jQuery\jquery_ui_touch-punch.js" />
+    <Content Include="Ara2\Files\Kiosk\AraKiosk.html" />
+    <Content Include="NewFolder1\Default.aspx" />
+    <Content Include="packages.config" />
+    <Content Include="FrmTeste\FrmTeste.AraDesign">
+      <Generator>AraDesignGenerator</Generator>
+    </Content>
+    <Content Include="FrmTeste\FrmTeste3.AraDesign" />
+    <EmbeddedResource Include="FrmTeste\teste.AraDesign" />
+    <Content Include="NewFolder1\Default.AraDesign" />
+    <Content Include="Ara2\LICENSE.md" />
+    <Content Include="Ara2\CREDITS.md" />
+    <Content Include="Ara2\Components\AraCheckbox\LICENSE.md" />
+    <Content Include="Ara2\Components\AraCheckbox\CREDITS.md" />
+    <Content Include="Ara2\Components\AraButton\LICENSE.md" />
+    <Content Include="Ara2\Components\AraButton\CREDITS.md" />
+    <Content Include="Ara2\Components\AraDiv\LICENSE.md" />
+    <Content Include="Ara2\Components\AraDiv\CREDITS.md" />
+    <Content Include="Ara2\Components\AraGrid\LICENSE.md" />
+    <Content Include="Ara2\Components\AraGrid\CREDITS.md" />
+    <Content Include="Ara2\Components\AraGridOfIcons\LICENSE.md" />
+    <Content Include="Ara2\Components\AraGridOfIcons\CREDITS.md" />
+    <Content Include="Ara2\Components\AraIFrame\LICENSE.md" />
+    <Content Include="Ara2\Components\AraIFrame\CREDITS.md" />
+    <Content Include="Ara2\Components\AraImage\LICENSE.md" />
+    <Content Include="Ara2\Components\AraImage\CREDITS.md" />
+    <Content Include="Ara2\Components\AraLabel\LICENSE.md" />
+    <Content Include="Ara2\Components\AraLabel\CREDITS.md" />
+    <Content Include="Ara2\Components\AraMenu\LICENSE.md" />
+    <Content Include="Ara2\Components\AraMenu\CREDITS.md" />
+    <Content Include="Ara2\Components\AraProgressBar\LICENSE.md" />
+    <Content Include="Ara2\Components\AraProgressBar\CREDITS.md" />
+    <Content Include="Ara2\Components\AraRadio\LICENSE.md" />
+    <Content Include="Ara2\Components\AraRadio\CREDITS.md" />
+    <Content Include="Ara2\Components\AraSelect\LICENSE.md" />
+    <Content Include="Ara2\Components\AraSelect\CREDITS.md" />
+    <Content Include="Ara2\Components\AraSplitContainers\LICENSE.md" />
+    <Content Include="Ara2\Components\AraSplitContainers\CREDITS.md" />
+    <Content Include="Ara2\Components\AraTable\LICENSE.md" />
+    <Content Include="Ara2\Components\AraTable\CREDITS.md" />
+    <Content Include="Ara2\Components\AraTabs\LICENSE.md" />
+    <Content Include="Ara2\Components\AraTabs\CREDITS.md" />
+    <Content Include="Ara2\Components\AraTextArea\LICENSE.md" />
+    <Content Include="Ara2\Components\AraTextArea\CREDITS.md" />
+    <Content Include="Ara2\Components\AraTextBox\LICENSE.md" />
+    <Content Include="Ara2\Components\AraTextBox\CREDITS.md" />
+    <Content Include="Ara2\Components\AraTimer\LICENSE.md" />
+    <Content Include="Ara2\Components\AraTimer\CREDITS.md" />
+    <Content Include="Ara2\Components\AraWindow\LICENSE.md" />
+    <Content Include="Ara2\Components\AraWindow\CREDITS.md" />
+    <Content Include="Ara2\Components\AraWindowTaskBar\LICENSE.md" />
+    <Content Include="Ara2\Components\AraWindowTaskBar\CREDITS.md" />
+    <Content Include="Ara2\Components\AraUpload\LICENSE.md" />
+    <Content Include="Ara2\Components\AraUpload\CREDITS.md" />
+    <None Include="Properties\PublishProfiles\teste.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmTeste\FrmTeste.AraDesign.cs">
+      <DependentUpon>FrmTeste.AraDesign</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTeste\FrmTeste.cs">
+      <DependentUpon>FrmTeste.AraDesign</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTeste\FrmTeste3.AraDesign.cs">
+      <DependentUpon>FrmTeste3.AraDesign</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTeste\FrmTeste3.cs">
+      <DependentUpon>FrmTeste3.AraDesign</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTeste\teste.AraDesign.cs">
+      <DependentUpon>teste.AraDesign</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTeste\teste.cs">
+      <DependentUpon>teste.AraDesign</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Default.AraDesign.cs">
+      <DependentUpon>Default.AraDesign</DependentUpon>
+    </Compile>
+    <Compile Include="NewFolder1\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="NewFolder1\Default.cs">
+      <DependentUpon>Default.AraDesign</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53942</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:53942/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

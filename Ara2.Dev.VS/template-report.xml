@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TemplateReport>
+  <ItemTemplates>
+    <ItemTemplate Path="ItemTemplates\AraDesign\Definitions\CSharp.vstemplate" Name="AraDesign" Description="Canvas de desenhos para Ara Framwork" ProjectType="CSharp" ProjectSubType="" />
+    <ItemTemplate Path="ItemTemplates\AraDesignMain\Definitions\CSharp.vstemplate" Name="AraDesignMain" Description="Canvas Main (Pagina inicial que envia o AraKernel) no MVC pode ser chamado de controller" ProjectType="CSharp" ProjectSubType="" />
+    <ItemTemplate Path="ItemTemplates\AraDesign\Definitions\Web.csharp.vstemplate" Name="AraDesign" Description="Canvas de desenhos para Ara Framwork" ProjectType="Web" ProjectSubType="CSharp" />
+    <ItemTemplate Path="ItemTemplates\AraDesignMain\Definitions\Web.csharp.vstemplate" Name="AraDesignMain" Description="Canvas Main (Pagina inicial que envia o AraKernel) no MVC pode ser chamado de controller" ProjectType="Web" ProjectSubType="CSharp" />
+  </ItemTemplates>
+  <ProjectTemplates />
+  <Snippets />
+</TemplateReport>

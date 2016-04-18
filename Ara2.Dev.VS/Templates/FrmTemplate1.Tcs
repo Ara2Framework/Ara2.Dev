@@ -1,0 +1,15 @@
+﻿using System;
+using Ara2.Components;
+
+namespace {NameSpace}
+{
+    [Serializable]
+    public class {ClassName} : {NameSpaceAraDesign}.{ClassNameAraDesign}
+    {
+        public {ClassName}({ConstructParan})
+            : base({ConstructBaseParan})
+        {
+            
+        }
+    }
+}

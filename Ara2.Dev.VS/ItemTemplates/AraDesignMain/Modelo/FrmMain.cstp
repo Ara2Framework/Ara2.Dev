@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Web;
+using Ara2;
+using Ara2.Components;
+using System.Reflection;
+using System.IO;
+using System.Text;
+using AtendimentoWhats.Database;
+using System.Linq;
+using LinqToDB;
+using AtendimentoWhats.Extensoes;
+using Tecnomips.Login;
+using Tecnomips.Seguranca.Forms;
+using Tecnomips.Seguranca;
+
+namespace $rootnamespace$
+{
+    [Serializable]
+    public class $fileinputname$ : $fileinputname$AraDesign
+    {
+        public $fileinputname$(Ara2.Session Session)
+            : base(Session)
+        {
+            // Aqui você pode inicar alguma cofiguração de sessão
+            //AtendimentoWhats.Database.StartDBContext.Start();
+
+            //Tick Tick = Tick.GetTick();
+            //Tick.GetTick().Session.AddCss("Forms/Main/css/Main.css");
+
+            // Aqui você pode chamar forms ou divs 
+            //ShowDiv(DivLogin());
+        }
+
+        // Aqui você pode colocar um html ou script puro
+        //public override string GetBodyHtml()
+        //{
+        //    return "<title>AtendimentoWhats</title>\"+",
+        //    "<script> $('head').append('<meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0\\\">'); </script>\";"
+        //}
+
+        public static $fileinputname$ GetInstance()
+        {
+            return (($fileinputname$)Tick.GetTick().Session.WindowMain);
+        }
+        
+    }
+
+
+}

@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.Teste\TestePublicação</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Ara2.Dev.Teste.dll">
+      <publishTime>04/12/2016 09:25:45</publishTime>
+    </File>
+    <File Include="bin/Ara2.dll">
+      <publishTime>04/12/2016 09:17:31</publishTime>
+    </File>
+    <File Include="bin/Ara2.Linq.dll">
+      <publishTime>04/12/2016 09:24:47</publishTime>
+    </File>
+    <File Include="bin/Dynamic.dll">
+      <publishTime>10/06/2015 21:02:28</publishTime>
+    </File>
+    <File Include="bin/EPPlus.dll">
+      <publishTime>01/08/2016 14:38:42</publishTime>
+    </File>
+    <File Include="bin/Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll">
+      <publishTime>03/22/2016 07:54:45</publishTime>
+    </File>
+    <File Include="bin/roslyn/csc.exe">
+      <publishTime>03/22/2016 07:54:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.Build.Tasks.CodeAnalysis.dll">
+      <publishTime>03/22/2016 07:54:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.CSharp.dll">
+      <publishTime>03/22/2016 07:54:42</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.dll">
+      <publishTime>03/22/2016 07:54:43</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CodeAnalysis.VisualBasic.dll">
+      <publishTime>03/22/2016 07:54:43</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.CSharp.Core.targets">
+      <publishTime>03/22/2016 07:54:43</publishTime>
+    </File>
+    <File Include="bin/roslyn/Microsoft.VisualBasic.Core.targets">
+      <publishTime>03/22/2016 07:54:43</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Collections.Immutable.dll">
+      <publishTime>03/22/2016 07:54:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/System.Reflection.Metadata.dll">
+      <publishTime>03/22/2016 07:54:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/vbc.exe">
+      <publishTime>03/22/2016 07:54:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe">
+      <publishTime>03/22/2016 07:54:44</publishTime>
+    </File>
+    <File Include="bin/roslyn/VBCSCompiler.exe.config">
+      <publishTime>03/22/2016 07:54:44</publishTime>
+    </File>
+    <File Include="FrmTeste/Default1.AraDesign">
+      <publishTime>04/12/2016 09:05:37</publishTime>
+    </File>
+    <File Include="FrmTeste/Default1.aspx">
+      <publishTime>04/12/2016 09:05:05</publishTime>
+    </File>
+    <File Include="FrmTeste/Default2.AraDesign">
+      <publishTime>04/12/2016 09:16:39</publishTime>
+    </File>
+    <File Include="FrmTeste/Default2.aspx">
+      <publishTime>04/12/2016 09:16:26</publishTime>
+    </File>
+    <File Include="FrmTeste/FrmTeste.AraDesign">
+      <publishTime>04/08/2016 12:02:33</publishTime>
+    </File>
+    <File Include="FrmTeste/FrmTeste3.AraDesign">
+      <publishTime>03/30/2016 22:17:52</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>03/22/2016 07:58:09</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/12/2016 09:24:52</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

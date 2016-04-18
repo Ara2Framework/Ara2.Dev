@@ -1,0 +1,21 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">
+  <TemplateData>
+    <ProjectType>CSharp</ProjectType>
+    
+    <DefaultName>AraDesign</DefaultName>
+    <Name>AraDesign</Name>
+    <Description>Canvas de desenhos para Ara Framwork</Description>    
+    <Icon>icon.png</Icon>
+    <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+    <TemplateID>0e8b73d1-9df6-436f-b76f-94b0c448cefd</TemplateID>
+    <SortOrder>1000</SortOrder>
+  </TemplateData>
+  <TemplateContent>
+    <References />
+
+    <ProjectItem TargetFileName="$fileinputname$.AraDesign" ItemType="EmbeddedResource" ReplaceParameters="true">
+      Modelo/Form.AraDesign
+    </ProjectItem>
+    
+  </TemplateContent>
+</VSTemplate>

@@ -1,0 +1,1018 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A52AB6E2-FC47-4039-824A-662D3B6D64F5}</ProjectGuid>
+    <ProjectTypeGuids>{349C5851-65DF-11DA-9384-00065B846F21};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Ara2.Dev.AraDesign.Edit</RootNamespace>
+    <AssemblyName>Ara2.Dev.AraDesign.Edit</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
+    <TargetFrameworkProfile />
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>12.0</OldToolsVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WcfConfigValidationEnabled>True</WcfConfigValidationEnabled>
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ara2, Version=1.2.6.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.1.2.6.2\lib\net40\Ara2.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraButton, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraButton.1.0.0.2\lib\net40\Ara2.AraButton.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraCheckbox, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraCheckbox.1.0.0.1\lib\net40\Ara2.AraCheckbox.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraDiv, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraDiv.1.0.0.2\lib\net40\Ara2.AraDiv.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraGrid, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraGrid.1.0.0.0\lib\net40\Ara2.AraGrid.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraGridOfIcons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraGridOfIcons.1.0.0.0\lib\net40\Ara2.AraGridOfIcons.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraIFrame, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraIFrame.1.0.0.0\lib\net40\Ara2.AraIFrame.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraImage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraImage.1.0.0.0\lib\net40\Ara2.AraImage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraLabel, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraLabel.1.0.0.1\lib\net40\Ara2.AraLabel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraMenu, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraMenu.1.0.0.0\lib\net40\Ara2.AraMenu.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraProgressBar, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraProgressBar.1.0.0.0\lib\net40\Ara2.AraProgressBar.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraRadio, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraRadio.1.0.0.0\lib\net40\Ara2.AraRadio.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraSelect, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraSelect.1.0.0.0\lib\net40\Ara2.AraSelect.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraSplitContainers, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraSplitContainers.1.0.0.0\lib\net40\Ara2.AraSplitContainers.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraTable, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraTable.1.0.0.0\lib\net40\Ara2.AraTable.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraTabs, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraTabs.1.0.0.0\lib\net40\Ara2.AraTabs.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraTextArea, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraTextArea.1.0.0.0\lib\net40\Ara2.AraTextArea.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraTextBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraTextBox.1.0.0.0\lib\net40\Ara2.AraTextBox.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraTimer, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraTimer.1.0.0.1\lib\net40\Ara2.AraTimer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.AraWindow, Version=1.0.0.2, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraWindow.1.0.0.3\lib\net40\Ara2.AraWindow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.Components.Upload, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.Upload.1.0.0.0\lib\net40\Ara2.Components.Upload.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ara2.ToolsExtension, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.ToolsExtension.1.0.0.0\lib\net40\Ara2.ToolsExtension.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DivEdit.cs" />
+    <Compile Include="FrmLayout\FrmLayout.AraDesign.cs" />
+    <Compile Include="FrmLayout\FrmLayout.cs" />
+    <Compile Include="MainEdit\AraObjectInstanceGetObjectInstanceCustomByCopy.cs" />
+    <Compile Include="MainEdit\MainEdit.aradesign.cs" />
+    <Compile Include="MainEdit\MainEdit.cs" />
+    <Compile Include="MainEdit\Service.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tools\Config.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Ara2.Dev.AraDesign.Edit.Service\Ara2.Dev.AraDesign.Edit.Service.csproj">
+      <Project>{b58f9fe8-a06f-49fa-84d4-47dcaeeb9a81}</Project>
+      <Name>Ara2.Dev.AraDesign.Edit.Service</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Ara2.Dev.AraDesign\Ara2.Dev.AraDesign.csproj">
+      <Project>{2a05480d-5b6e-437c-8d1a-01cb6f3f45eb}</Project>
+      <Name>Ara2.Dev.AraDesign</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Ara2\Components\AraButton\AraButton.js" />
+    <Content Include="Ara2\Components\AraCheckbox\AraCheckbox.js" />
+    <Content Include="Ara2\Components\AraComponent\AraScrollBar\Files\AraScrollBar.js" />
+    <Content Include="Ara2\Components\AraDiv\AraDiv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\AraEditorHtml.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\adapters\jquery.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\Base64.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\ckeditor.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\ckeditor_basepath.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\config.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\af.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\ar.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\bg.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\bn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\bs.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\cs.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\cy.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\da.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\de.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\el.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\en-au.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\en-ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\en-gb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\en.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\eo.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\es.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\et.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\eu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\fa.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\fi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\fo.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\fr-ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\fr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\gl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\gu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\he.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\hi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\hr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\hu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\id.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\is.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\it.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\ja.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\ka.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\km.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\ko.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\ku.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\lt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\lv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\mk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\mn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\ms.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\nb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\nl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\no.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\pl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\pt-br.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\pt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\ro.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\ru.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\si.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\sk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\sl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\sq.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\sr-latn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\sr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\sv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\th.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\tr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\tt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\ug.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\uk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\vi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\zh-cn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\lang\zh.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\a11yhelp.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\ar.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\bg.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\cs.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\cy.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\da.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\de.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\el.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\en-gb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\en.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\eo.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\es.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\et.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\fa.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\fi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\fr-ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\fr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\gl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\gu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\he.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\hi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\hr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\hu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\id.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\it.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\ja.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\km.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\ko.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\ku.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\lt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\lv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\mk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\mn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\nb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\nl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\no.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\pl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\pt-br.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\pt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\ro.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\ru.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\si.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\sk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\sl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\sq.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\sr-latn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\sr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\sv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\th.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\tr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\tt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\ug.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\uk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\vi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\zh-cn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\zh.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\a11yhelp\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\about\dialogs\about.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\about\dialogs\hidpi\logo_ckeditor.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\about\dialogs\logo_ckeditor.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\cs.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\de.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\el.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\en-gb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\en.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\fa.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\fr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\gl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\he.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\hu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\it.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\ja.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\km.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\nb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\nl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\pl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\pt-br.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\pt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\ro.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\ru.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\sl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\sv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\tt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\uk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\vi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\lang\zh-cn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\button\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\clipboard\dialogs\paste.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\dialogs\codesnippet.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\icons\codesnippet.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\icons\hidpi\codesnippet.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\bg.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\cs.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\da.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\de.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\el.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\en-gb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\en.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\eo.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\es.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\et.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\fa.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\fr-ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\fr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\hr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\hu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\it.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\ja.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\ku.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\lt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\lv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\nb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\nl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\no.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\pl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\pt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\ro.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\ru.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\sk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\sl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\sq.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\sv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\th.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\tt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\ug.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\uk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lang\vi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\highlight.pack.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\arta.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\ascetic.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\atelier-dune\dark.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\atelier-dune\light.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\atelier-forest\dark.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\atelier-forest\light.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\atelier-heath\dark.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\atelier-heath\light.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\atelier-lakeside\dark.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\atelier-lakeside\light.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\atelier-seaside\dark.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\atelier-seaside\light.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\brown_paper.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\brown_papersq.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\dark.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\default.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\docco.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\far.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\foundation.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\github.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\googlecode.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\idea.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\ir_black.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\magula.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\mono-blue.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\monokai.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\monokai_sublime.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\obsidian.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\paraiso\dark.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\paraiso\light.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\pojoaque.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\pojoaque.jpg" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\railscasts.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\rainbow.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\school_book.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\school_book.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\solarized_dark.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\solarized_light.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\sunburst.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\tomorrow-night-blue.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\tomorrow-night-bright.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\tomorrow-night-eighties.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\tomorrow-night.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\tomorrow.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\vs.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\xcode.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\lib\highlight\styles\zenburn.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\codesnippet\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\icons\bgcolor.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\icons\hidpi\bgcolor.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\icons\hidpi\textcolor.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\icons\textcolor.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\af.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\ar.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\bg.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\bn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\bs.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\cs.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\cy.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\da.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\de.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\el.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\en-au.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\en-ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\en-gb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\en.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\eo.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\es.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\et.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\eu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\fa.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\fi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\fo.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\fr-ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\fr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\gl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\gu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\he.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\hi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\hr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\hu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\id.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\is.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\it.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\ja.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\ka.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\km.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\ko.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\ku.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\lt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\lv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\mk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\mn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\ms.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\nb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\nl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\no.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\pl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\pt-br.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\pt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\ro.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\ru.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\si.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\sk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\sl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\sq.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\sr-latn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\sr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\sv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\th.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\tr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\tt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\ug.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\uk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\vi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\zh-cn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\lang\zh.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colorbutton\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\colordialog\dialogs\colordialog.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\dialog\dialogDefinition.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\div\dialogs\div.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\find\dialogs\find.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\flash\dialogs\flash.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\flash\images\placeholder.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\floatpanel\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\af.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\ar.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\bg.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\bn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\bs.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\cs.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\cy.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\da.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\de.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\el.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\en-au.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\en-ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\en-gb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\en.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\eo.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\es.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\et.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\eu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\fa.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\fi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\fo.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\fr-ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\fr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\gl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\gu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\he.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\hi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\hr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\hu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\id.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\is.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\it.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\ja.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\ka.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\km.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\ko.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\ku.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\lt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\lv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\mk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\mn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\ms.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\nb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\nl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\no.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\pl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\pt-br.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\pt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\ro.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\ru.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\si.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\sk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\sl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\sq.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\sr-latn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\sr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\sv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\th.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\tr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\tt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\ug.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\uk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\vi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\zh-cn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\lang\zh.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\font\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\forms\dialogs\button.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\forms\dialogs\checkbox.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\forms\dialogs\form.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\forms\dialogs\hiddenfield.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\forms\dialogs\radio.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\forms\dialogs\select.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\forms\dialogs\textarea.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\forms\dialogs\textfield.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\forms\images\hiddenfield.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\icons.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\icons_hidpi.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\iframe\dialogs\iframe.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\iframe\images\placeholder.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\imageresize\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\image\dialogs\image.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\image\images\noimage.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\lineutils\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\link\dialogs\anchor.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\link\dialogs\link.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\link\images\anchor.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\link\images\hidpi\anchor.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\listblock\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\liststyle\dialogs\liststyle.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\magicline\images\hidpi\icon.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\magicline\images\icon.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\pagebreak\images\pagebreak.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\panelbutton\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\panel\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\pastefromword\filter\default.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\preview\preview.html" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\richcombo\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\scayt\dialogs\options.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\scayt\dialogs\toolbar.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\showblocks\images\block_address.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\showblocks\images\block_blockquote.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\showblocks\images\block_div.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\showblocks\images\block_h1.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\showblocks\images\block_h2.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\showblocks\images\block_h3.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\showblocks\images\block_h4.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\showblocks\images\block_h5.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\showblocks\images\block_h6.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\showblocks\images\block_p.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\showblocks\images\block_pre.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\dialogs\smiley.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\angel_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\angel_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\angry_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\angry_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\broken_heart.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\broken_heart.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\confused_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\confused_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\cry_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\cry_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\devil_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\devil_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\embaressed_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\embarrassed_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\embarrassed_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\envelope.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\envelope.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\heart.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\heart.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\kiss.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\kiss.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\lightbulb.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\lightbulb.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\omg_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\omg_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\regular_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\regular_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\sad_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\sad_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\shades_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\shades_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\teeth_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\teeth_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\thumbs_down.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\thumbs_down.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\thumbs_up.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\thumbs_up.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\tongue_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\tongue_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\tounge_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\whatchutalkingabout_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\whatchutalkingabout_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\wink_smile.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\smiley\images\wink_smile.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\ar.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\bg.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\cs.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\cy.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\de.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\el.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\en-gb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\en.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\eo.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\es.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\et.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\fa.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\fi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\fr-ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\fr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\gl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\he.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\hr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\hu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\id.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\it.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\ja.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\km.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\ku.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\lv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\nb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\nl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\no.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\pl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\pt-br.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\pt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\ru.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\si.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\sk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\sl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\sq.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\sv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\th.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\tr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\tt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\ug.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\uk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\vi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\zh-cn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\zh.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\lang\_translationstatus.txt" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\specialchar\dialogs\specialchar.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\tabletools\dialogs\tableCell.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\table\dialogs\table.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\templates\dialogs\templates.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\templates\dialogs\templates.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\templates\templates\default.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\templates\templates\images\template1.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\templates\templates\images\template2.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\templates\templates\images\template3.gif" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\dev\console.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\dev\contents.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\dev\widgetstyles.html" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\images\handle.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\ar.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\ca.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\cs.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\cy.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\de.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\el.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\en-gb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\en.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\es.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\fa.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\fi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\fr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\gl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\he.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\hr.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\hu.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\it.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\ja.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\km.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\ko.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\nb.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\nl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\no.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\pl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\pt-br.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\pt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\ru.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\sl.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\sv.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\tt.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\uk.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\vi.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\zh-cn.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\lang\zh.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\widget\plugin.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\wsc\dialogs\ciframe.html" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\wsc\dialogs\tmpFrameset.html" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\wsc\dialogs\wsc.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\wsc\dialogs\wsc.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\wsc\dialogs\wsc_ie.js" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\dialog.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\dialog_ie.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\dialog_ie7.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\dialog_ie8.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\dialog_iequirks.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\editor.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\editor_gecko.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\editor_ie.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\editor_ie7.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\editor_ie8.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\editor_iequirks.css" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\icons.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\icons_hidpi.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\images\arrow.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\images\close.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\images\hidpi\close.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\images\hidpi\lock.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\images\lock-open.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\images\lock.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\images\refresh.png" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\styles.js" />
+    <Content Include="Ara2\Components\AraGoogleMaps\AraGoogleMaps.js" />
+    <Content Include="Ara2\Components\AraGridOfIcons\AraGridOfIcons.js" />
+    <Content Include="Ara2\Components\AraGrid\AraGrid.js" />
+    <Content Include="Ara2\Components\AraGrid\files\grid_locale-pt-br.js" />
+    <Content Include="Ara2\Components\AraGrid\files\jquery_jqGrid_min.js" />
+    <Content Include="Ara2\Components\AraGrid\files\jquery_jqGrid_src.js" />
+    <Content Include="Ara2\Components\AraGrid\files\ui_jqgrid.css" />
+    <Content Include="Ara2\Components\AraGrid\files\ui_jqgrid_Ara2.css" />
+    <Content Include="Ara2\Components\AraIFrame\AraIFrame.js" />
+    <Content Include="Ara2\Components\AraImage\AraImage.js" />
+    <Content Include="Ara2\Components\AraLabel\AraLabel.js" />
+    <Content Include="Ara2\Components\AraMenu\AraMenu.js" />
+    <Content Include="Ara2\Components\AraMenu\files\fg_menu.css" />
+    <Content Include="Ara2\Components\AraMenu\files\fg_menu.js" />
+    <Content Include="Ara2\Components\AraMenu\files\fg_menu_add.css" />
+    <Content Include="Ara2\Components\AraProgressbar\AraProgressbar.js" />
+    <Content Include="Ara2\Components\AraRadio\AraRadio.js" />
+    <Content Include="Ara2\Components\AraSelect\AraSelect.js" />
+    <Content Include="Ara2\Components\AraSplitContainers\AraSplitContainers.js" />
+    <Content Include="Ara2\Components\AraTable\AraTable.js" />
+    <Content Include="Ara2\Components\AraTable\td\AraTableTd.js" />
+    <Content Include="Ara2\Components\AraTable\tr\AraTableTr.js" />
+    <Content Include="Ara2\Components\AraTabs\AraTabs.js" />
+    <Content Include="Ara2\Components\AraTextBox\AraTextBox.js" />
+    <Content Include="Ara2\Components\AraTextBox\files\jquery-ui-timepicker-addon.css" />
+    <Content Include="Ara2\Components\AraTextBox\files\jquery-ui-timepicker-addon.js" />
+    <Content Include="Ara2\Components\AraTextBox\files\jquery_meio_mask.js" />
+    <Content Include="Ara2\Components\AraTextBox\files\jquery_meio_mask_min.js" />
+    <Content Include="Ara2\Components\AraTimer\AraTimer.js" />
+    <Content Include="Ara2\Components\AraUpload\AraUpload.js" />
+    <Content Include="Ara2\Components\AraUpload\files\fileuploader.css" />
+    <Content Include="Ara2\Components\AraUpload\files\fileuploader.js" />
+    <Content Include="Ara2\Components\AraUpload\files\fileuploader.min.js" />
+    <Content Include="Ara2\Components\AraUpload\files\loading.gif" />
+    <Content Include="Ara2\Components\AraWindowTaskBar\AraWindowTaskbar.js" />
+    <Content Include="Ara2\Components\AraWindow\AraWindow.js" />
+    <Content Include="Ara2\Components\AraWindow\AraWindows.js" />
+    <Content Include="Ara2\Components\WindowMain\WindowMain.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAra.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraAnchor.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraClass.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraComponent.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraGenVarSend.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraHttps.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraTick.js" />
+    <Content Include="Ara2\Files\AraKernel\ClassAraTools.js" />
+    <Content Include="Ara2\Files\AraKernel\other\ie7\ie7-squish.js" />
+    <Content Include="Ara2\Files\AraKernel\other\ie7\IE7.js" />
+    <Content Include="Ara2\Files\AraKernel\other\ie7\IE8.js" />
+    <Content Include="Ara2\Files\AraKernel\other\ie7\IE9.js" />
+    <Content Include="Ara2\Files\AraKernel\other\jquery_printElement.js" />
+    <Content Include="Ara2\Files\AraKernel\other\jquery_selectboxes.js" />
+    <Content Include="Ara2\Files\AraKernel\other\json2.js" />
+    <Content Include="Ara2\Files\AraScrollBar\AraScrollBar.js" />
+    <Content Include="Ara2\Files\BrowserNotSupported\BrowserNotSupported.html" />
+    <Content Include="Ara2\Files\Carregando.gif" />
+    <Content Include="Ara2\Files\JQueryScoolBar\jquery_nicescroll.js" />
+    <Content Include="Ara2\Files\jQuery\css\AraJQuery.css" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\jquery-ui_min.css" />
+    <Content Include="Ara2\Files\jQuery\css\images\ui-anim_basic_16x16.gif" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_flat_10_000000_40x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_228ef1_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ef8c08_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ffd27a_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Ara2\Files\jQuery\css\ui_lightness\jquery-ui-1_9_2_custom.css" />
+    <Content Include="Ara2\Files\jQuery\jquery-1_11_1_min.js" />
+    <Content Include="Ara2\Files\jQuery\jquery-cookie.js" />
+    <Content Include="Ara2\Files\jQuery\jquery-migrate-1_2_1_min.js" />
+    <Content Include="Ara2\Files\jQuery\jquery-ui-1_11_2_custom_min.js" />
+    <Content Include="Ara2\Files\jQuery\jquery_ui_touch-punch.js" />
+    <Content Include="Ara2\Files\Kiosk\AraKiosk.html" />
+    <Content Include="Default.aspx">
+      <SubType>ASPXCodeBehind</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Config.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="FrmLayout\FrmLayout.AraDesign.json" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\imageresize\LICENSE.md" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\imageresize\README.md" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\scayt\LICENSE.md" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\scayt\README.md" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\wsc\LICENSE.md" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\plugins\wsc\README.md" />
+    <Content Include="Ara2\Components\AraEditorHtml\files\skins\moono\readme.md" />
+    <Content Include="Ara2\LICENSE.md" />
+    <Content Include="Ara2\ManifestResourceStreamToPathFile2.json" />
+    <Content Include="Ara2\CREDITS.md" />
+    <Content Include="packages.config" />
+    <Content Include="Ara2\Components\AraButton\LICENSE.md" />
+    <Content Include="Ara2\Components\AraButton\CREDITS.md" />
+    <Content Include="Ara2\Components\AraCheckbox\LICENSE.md" />
+    <Content Include="Ara2\Components\AraCheckbox\CREDITS.md" />
+    <Content Include="Ara2\Components\AraDiv\LICENSE.md" />
+    <Content Include="Ara2\Components\AraDiv\CREDITS.md" />
+    <Content Include="Ara2\Components\AraGrid\LICENSE.md" />
+    <Content Include="Ara2\Components\AraGrid\CREDITS.md" />
+    <Content Include="Ara2\Components\AraGridOfIcons\LICENSE.md" />
+    <Content Include="Ara2\Components\AraGridOfIcons\CREDITS.md" />
+    <Content Include="Ara2\Components\AraIFrame\LICENSE.md" />
+    <Content Include="Ara2\Components\AraIFrame\CREDITS.md" />
+    <Content Include="Ara2\Components\AraImage\LICENSE.md" />
+    <Content Include="Ara2\Components\AraImage\CREDITS.md" />
+    <Content Include="Ara2\Components\AraLabel\LICENSE.md" />
+    <Content Include="Ara2\Components\AraLabel\CREDITS.md" />
+    <Content Include="Ara2\Components\AraMenu\LICENSE.md" />
+    <Content Include="Ara2\Components\AraMenu\CREDITS.md" />
+    <Content Include="Ara2\Components\AraProgressbar\LICENSE.md" />
+    <Content Include="Ara2\Components\AraProgressbar\CREDITS.md" />
+    <Content Include="Ara2\Components\AraRadio\LICENSE.md" />
+    <Content Include="Ara2\Components\AraRadio\CREDITS.md" />
+    <Content Include="Ara2\Components\AraSelect\LICENSE.md" />
+    <Content Include="Ara2\Components\AraSelect\CREDITS.md" />
+    <Content Include="Ara2\Components\AraSplitContainers\LICENSE.md" />
+    <Content Include="Ara2\Components\AraSplitContainers\CREDITS.md" />
+    <Content Include="Ara2\Components\AraTable\LICENSE.md" />
+    <Content Include="Ara2\Components\AraTable\CREDITS.md" />
+    <Content Include="Ara2\Components\AraTabs\LICENSE.md" />
+    <Content Include="Ara2\Components\AraTabs\CREDITS.md" />
+    <Content Include="Ara2\Components\AraTextArea\LICENSE.md" />
+    <Content Include="Ara2\Components\AraTextArea\CREDITS.md" />
+    <Content Include="Ara2\Components\AraTextBox\LICENSE.md" />
+    <Content Include="Ara2\Components\AraTextBox\CREDITS.md" />
+    <Content Include="Ara2\Components\AraTimer\LICENSE.md" />
+    <Content Include="Ara2\Components\AraTimer\CREDITS.md" />
+    <Content Include="Ara2\Components\AraWindow\LICENSE.md" />
+    <Content Include="Ara2\Components\AraWindow\CREDITS.md" />
+    <Content Include="Ara2\Components\AraWindowTaskBar\LICENSE.md" />
+    <Content Include="Ara2\Components\AraWindowTaskBar\CREDITS.md" />
+    <Content Include="Ara2\Components\AraUpload\LICENSE.md" />
+    <Content Include="Ara2\Components\AraUpload\CREDITS.md" />
+    <None Include="Properties\PublishProfiles\NaPastadoAraDevVS.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">13.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349C5851-65DF-11DA-9384-00065B846F21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>45373</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:45374/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+    <MonoDevelop>
+      <Properties VerifyCodeBehindFields="true" VerifyCodeBehindEvents="true">
+        <XspParameters Port="8080" Address="127.0.0.1" SslMode="None" SslProtocol="Default" KeyType="None" CertFile="" KeyFile="" PasswordOptions="None" Password="" Verbose="true" />
+        <WebDeployTargets>
+          <Target Name="">
+            <FileCopier Handler="MonoDevelop.Deployment.LocalFileCopyHandler" TargetDirectory="/mnt/E/Tecnomips/Ara.Net2/AraTester/PublicarEstaPasta" ctype="LocalFileCopyConfiguration" />
+          </Target>
+        </WebDeployTargets>
+      </Properties>
+    </MonoDevelop>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+</Project>

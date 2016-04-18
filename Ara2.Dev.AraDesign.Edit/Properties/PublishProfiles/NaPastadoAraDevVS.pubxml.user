@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\..\Ara2.Dev.VS\Resources\ServidorWeb\</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/Ara2.Dev.AraDesign.dll">
+      <publishTime>04/12/2016 12:09:03</publishTime>
+    </File>
+    <File Include="bin/Ara2.Dev.AraDesign.Edit.dll">
+      <publishTime>04/12/2016 12:26:35</publishTime>
+    </File>
+    <File Include="bin/Ara2.Dev.AraDesign.Edit.Service.dll">
+      <publishTime>04/12/2016 12:26:32</publishTime>
+    </File>
+    <File Include="bin/Ara2.dll">
+      <publishTime>04/12/2016 11:36:35</publishTime>
+    </File>
+    <File Include="bin/Tecnomips.Tools.dll">
+      <publishTime>04/08/2016 10:17:18</publishTime>
+    </File>
+    <File Include="Config.config">
+      <publishTime>04/08/2016 10:46:55</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>11/17/2015 09:59:37</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>04/08/2016 10:21:51</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/08/2016 08:38:44</publishTime>
+    </File>
+  </ItemGroup>
+</Project>
