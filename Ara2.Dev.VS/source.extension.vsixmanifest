@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011" xmlns:d="http://schemas.microsoft.com/developer/vsx-schema-design/2011">
   <Metadata>
-    <Identity Id="4F86B481-0E48-4760-829C-264EABC29A16" Version="1.0.1" Language="en-US" Publisher="Tecnomips" />
+    <Identity Id="4F86B481-0E48-4760-829C-264EABC29A16" Version="1.1" Language="en-US" Publisher="Tecnomips" />
     <DisplayName>Ara2.Dev.VS</DisplayName>
     <Description xml:space="preserve">Ara2 Dev for VS</Description>
     <MoreInfo>http://www.araframework.com.br/</MoreInfo>
@@ -11,9 +11,6 @@
     <InstallationTarget Id="Microsoft.VisualStudio.Pro" Version="[11.0,]" />
     <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.Community" />
     <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.Enterprise" />
-    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.VSWinExpress" />
-    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.VWDExpress" />
-    <InstallationTarget Version="[11.0,]" Id="Microsoft.VisualStudio.VSWinDesktopExpress" />
   </Installation>
   <Dependencies>
     <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" d:Source="Manual" Version="[4.5,)" />
