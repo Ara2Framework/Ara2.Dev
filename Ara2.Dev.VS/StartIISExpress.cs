@@ -16,32 +16,32 @@ namespace Tecnomips.Ara2_Dev_VS
         public static string Star(string AppPath)
         {
             string vPathExtencion = GetPathExtencion();
-            string vPathWebServer = Path.Combine(vPathExtencion, "WebServer");
+            string vPathWebServer = Path.Combine(vPathExtencion, "Resources", "ServidorWeb");
 
-            #region Cria pasta vPathWebServer
-            try
-            {
-                if (!Directory.Exists(Path.Combine(vPathWebServer)))
-                    Directory.CreateDirectory(Path.Combine(vPathWebServer));
-            }
-            catch
-            {
-                throw new Exception("Erro ao criar pasta '" + vPathWebServer + "'");
-            }
-            #endregion
+            //#region Cria pasta vPathWebServer
+            //try
+            //{
+            //    if (!Directory.Exists(Path.Combine(vPathWebServer)))
+            //        Directory.CreateDirectory(Path.Combine(vPathWebServer));
+            //}
+            //catch
+            //{
+            //    throw new Exception("Erro ao criar pasta '" + vPathWebServer + "'");
+            //}
+            //#endregion
 
 
-            if (!Directory.Exists(Path.Combine(vPathWebServer, "bin")))
-                Directory.CreateDirectory(Path.Combine(vPathWebServer, "bin"));
+            //if (!Directory.Exists(Path.Combine(vPathWebServer, "bin")))
+            //    Directory.CreateDirectory(Path.Combine(vPathWebServer, "bin"));
 
-            ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "Default.aspx"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "Default.aspx");
-            ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "Web.config"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "Web.config");
-            ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "Config.config"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "Config.config");
-            ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "bin/Ara2.Dev.AraDesign.dll"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "bin/Ara2.Dev.AraDesign.dll");
-            ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "bin/Ara2.Dev.AraDesign.Edit.dll"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "bin/Ara2.Dev.AraDesign.Edit.dll");
-            ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "bin/Ara2.Dev.AraDesign.Edit.Service.dll"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "bin/Ara2.Dev.AraDesign.Edit.Service.dll");
-            ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "bin/Ara2.dll"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "bin/Ara2.dll");
-            ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "bin/Ara2.Dev.VS.Tools.dll"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "bin/Ara2.Dev.VS.Tools.dll");
+            //ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "Default.aspx"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "Default.aspx");
+            //ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "Web.config"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "Web.config");
+            //ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "Config.config"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "Config.config");
+            //ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "bin/Ara2.Dev.AraDesign.dll"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "bin/Ara2.Dev.AraDesign.dll");
+            //ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "bin/Ara2.Dev.AraDesign.Edit.dll"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "bin/Ara2.Dev.AraDesign.Edit.dll");
+            //ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "bin/Ara2.Dev.AraDesign.Edit.Service.dll"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "bin/Ara2.Dev.AraDesign.Edit.Service.dll");
+            //ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "bin/Ara2.dll"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "bin/Ara2.dll");
+            //ManifestResourceStreamToPathFile(Path.Combine(vPathWebServer, "bin/Ara2.Dev.VS.Tools.dll"), "Tecnomips.Ara2_Dev_VS/Resources/ServidorWeb/" + "bin/Ara2.Dev.VS.Tools.dll");
 
 
 
@@ -114,18 +114,24 @@ namespace Tecnomips.Ara2_Dev_VS
                         throw new Exception("IISExpressExe not found \"" + IIS_EXPRESS + "\"");
                 }
 
-                process = Process.Start(new ProcessStartInfo
-                {
-                    FileName = IIS_EXPRESS,
-                    //WindowStyle = ProcessWindowStyle.Hidden,
-                    ErrorDialog = false,
-                    LoadUserProfile = true,
-                    CreateNoWindow = true,
-                    UseShellExecute = false,
-                    Arguments = string.Format("/path:\"{0}\" /port:{1}", vPathWebServer, port),
-                    Verb = "runas"
-                });
-
+                process = new Process
+                    {
+                    StartInfo = new ProcessStartInfo
+                        {
+                            FileName = IIS_EXPRESS,
+                            //WindowStyle = ProcessWindowStyle.Hidden,
+                            ErrorDialog = false,
+                            LoadUserProfile = true,
+                            CreateNoWindow = true,
+                            UseShellExecute = false,
+                            Arguments = string.Format("/path:\"{0}\" /port:{1}", vPathWebServer, port),
+                            Verb = "runas",
+                            //RedirectStandardOutput = true
+                        }
+                    };
+                process.OutputDataReceived += Process_OutputDataReceived;
+                process.ErrorDataReceived += Process_ErrorDataReceived;
+                process.Start();
 
                 Url = GetUrl(port);
                 AddLog("Url '" + Url + "'");
@@ -143,6 +149,16 @@ namespace Tecnomips.Ara2_Dev_VS
             
 
             return GetUrl(port);
+        }
+
+        private static void Process_ErrorDataReceived(object sender, DataReceivedEventArgs e)
+        {
+            AddLog("IIS Error: " + e.Data);
+        }
+
+        private static void Process_OutputDataReceived(object sender, DataReceivedEventArgs e)
+        {
+            AddLog("IIS: " + e.Data);
         }
 
 

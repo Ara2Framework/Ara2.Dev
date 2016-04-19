@@ -236,12 +236,300 @@
     <Compile Include="StartIISExpress.cs" />
     <EmbeddedResource Include="Templates\FrmTemplate1.Tcs" />
     <Resource Include="ItemTemplates\AraDesign\icon.png" />
-    <EmbeddedResource Include="Resources\ServidorWeb\bin\Ara2.Dev.AraDesign.dll" />
-    <EmbeddedResource Include="Resources\ServidorWeb\bin\Ara2.Dev.AraDesign.Edit.dll" />
-    <EmbeddedResource Include="Resources\ServidorWeb\bin\Ara2.Dev.AraDesign.Edit.Service.dll" />
-    <EmbeddedResource Include="Resources\ServidorWeb\bin\Ara2.dll" />
-    <EmbeddedResource Include="Resources\ServidorWeb\bin\Tecnomips.Tools.dll" />
-    <EmbeddedResource Include="Resources\ServidorWeb\Default.aspx" />
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraButton\AraButton.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraCheckbox\AraCheckbox.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraDiv\AraDiv.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraGridOfIcons\AraGridOfIcons.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraGrid\AraGrid.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraGrid\files\grid_locale-pt-br.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraGrid\files\jquery_jqGrid_min.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraGrid\files\jquery_jqGrid_src.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraGrid\files\ui_jqgrid.css">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraGrid\files\ui_jqgrid_Ara2.css">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraIFrame\AraIFrame.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraImage\AraImage.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraLabel\AraLabel.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraMenu\AraMenu.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraMenu\files\fg_menu.css">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraMenu\files\fg_menu.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraMenu\files\fg_menu_add.css">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraProgressbar\AraProgressbar.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraRadio\AraRadio.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraSelect\AraSelect.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraSplitContainers\AraSplitContainers.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraTable\AraTable.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraTable\td\AraTableTd.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraTable\tr\AraTableTr.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraTabs\AraTabs.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraTextBox\AraTextBox.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraTimer\AraTimer.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraUpload\AraUpload.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraUpload\files\fileuploader.css">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraUpload\files\fileuploader.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraUpload\files\fileuploader.min.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraUpload\files\loading.gif">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraWindowTaskBar\AraWindowTaskbar.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraWindow\AraWindow.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\AraWindow\AraWindows.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Components\WindowMain\WindowMain.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\ClassAra.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\ClassAraAnchor.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\ClassAraClass.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\ClassAraComponent.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\ClassAraGenVarSend.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\ClassAraHttps.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\ClassAraTick.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\ClassAraTools.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\other\ie7\ie7-squish.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\other\ie7\IE7.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\other\ie7\IE8.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\other\ie7\IE9.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\other\jquery_printElement.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\other\jquery_selectboxes.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraKernel\other\json2.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\AraScrollBar\AraScrollBar.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\BrowserNotSupported\BrowserNotSupported.html">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\Carregando.gif">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\JQueryScoolBar\jquery_nicescroll.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\AraJQuery.css">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_flat_15_cd0a0a_40x100.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_100_e4f1fb_1x400.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_50_3baae3_1x400.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_80_d7ebf9_1x400.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-hard_70_000000_1x100.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-soft_100_deedf7_1x100.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-soft_25_ffef8f_1x100.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_2694e8_256x240.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_2e83ff_256x240.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_3d80b3_256x240.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_72a7cf_256x240.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_ffffff_256x240.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\cupertino_1_11\jquery-ui_min.css">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\images\ui-anim_basic_16x16.gif">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_flat_10_000000_40x100.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_100_f6f6f6_1x400.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_100_fdf5ce_1x400.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_65_ffffff_1x400.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_222222_256x240.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_228ef1_256x240.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ef8c08_256x240.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ffd27a_256x240.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ffffff_256x240.png">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\css\ui_lightness\jquery-ui-1_9_2_custom.css">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\jquery-1_11_1_min.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\jquery-cookie.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\jquery-migrate-1_2_1_min.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\jquery-ui-1_11_2_custom_min.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\jQuery\jquery_ui_touch-punch.js">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\Files\Kiosk\AraKiosk.html">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.Dev.AraDesign.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.Dev.AraDesign.Edit.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.Dev.AraDesign.Edit.Service.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Default.aspx">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <Resource Include="ItemTemplates\AraDesignMain\icon.png" />
     <Resource Include="ItemTemplates\AraDesignMain\readme.txt" />
     <EmbeddedResource Include="ItemTemplates\AraDesignMain\Modelo\Default.aspx">
@@ -279,65 +567,70 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraButton.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraCheckbox.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraDiv.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraGrid.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraGridOfIcons.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraIFrame.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraImage.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraLabel.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraMenu.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraProgressBar.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraRadio.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraSelect.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraSplitContainers.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraTable.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraTabs.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraTextArea.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraTextBox.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraTimer.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraWindow.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.Components.Upload.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.ToolsExtension.dll">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <EmbeddedResource Include="ItemTemplates\AraDesign\Modelo\Form.AraDesign" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ffffff_256x240.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ffd27a_256x240.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_ef8c08_256x240.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_228ef1_256x240.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-icons_222222_256x240.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_highlight-soft_75_ffe45c_1x100.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_highlight-soft_100_eeeeee_1x100.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_gloss-wave_35_f6a828_500x100.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_65_ffffff_1x400.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_100_fdf5ce_1x400.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_glass_100_f6f6f6_1x400.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_flat_10_000000_40x100.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_diagonals-thick_20_666666_40x40.png" />
-    <Resource Include="Ara2\Files\jQuery\css\ui_lightness\images\ui-bg_diagonals-thick_18_b81900_40x40.png" />
-    <Resource Include="Ara2\Files\jQuery\css\images\ui-anim_basic_16x16.gif" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_ffffff_256x240.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_72a7cf_256x240.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_3d80b3_256x240.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_2e83ff_256x240.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-icons_2694e8_256x240.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-hard_70_000000_1x100.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_80_d7ebf9_1x400.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_50_3baae3_1x400.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_glass_100_e4f1fb_1x400.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_flat_15_cd0a0a_40x100.png" />
-    <Resource Include="Ara2\Files\jQuery\css\cupertino_1_11\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
-    <Resource Include="Ara2\Files\Carregando.gif" />
-    <Content Include="Ara2\Components\WindowMain\WindowMain.js" />
-    <Content Include="Ara2\Files\AraKernel\ClassAra.js" />
-    <Content Include="Ara2\Files\AraKernel\ClassAraAnchor.js" />
-    <Content Include="Ara2\Files\AraKernel\ClassAraClass.js" />
-    <Content Include="Ara2\Files\AraKernel\ClassAraComponent.js" />
-    <Content Include="Ara2\Files\AraKernel\ClassAraGenVarSend.js" />
-    <Content Include="Ara2\Files\AraKernel\ClassAraHttps.js" />
-    <Content Include="Ara2\Files\AraKernel\ClassAraTick.js" />
-    <Content Include="Ara2\Files\AraKernel\ClassAraTools.js" />
-    <Content Include="Ara2\Files\AraKernel\other\ie7\ie7-squish.js" />
-    <Content Include="Ara2\Files\AraKernel\other\ie7\IE7.js" />
-    <Content Include="Ara2\Files\AraKernel\other\ie7\IE8.js" />
-    <Content Include="Ara2\Files\AraKernel\other\ie7\IE9.js" />
-    <Content Include="Ara2\Files\AraKernel\other\jquery_printElement.js" />
-    <Content Include="Ara2\Files\AraKernel\other\jquery_selectboxes.js" />
-    <Content Include="Ara2\Files\AraKernel\other\json2.js" />
-    <Content Include="Ara2\Files\AraScrollBar\AraScrollBar.js" />
-    <Content Include="Ara2\Files\BrowserNotSupported\BrowserNotSupported.html" />
-    <Content Include="Ara2\Files\JQueryScoolBar\jquery_nicescroll.js" />
-    <Content Include="Ara2\Files\jQuery\css\AraJQuery.css" />
-    <Content Include="Ara2\Files\jQuery\css\cupertino_1_11\jquery-ui_min.css" />
-    <Content Include="Ara2\Files\jQuery\css\ui_lightness\jquery-ui-1_9_2_custom.css" />
-    <Content Include="Ara2\Files\jQuery\jquery-1_11_1_min.js" />
-    <Content Include="Ara2\Files\jQuery\jquery-cookie.js" />
-    <Content Include="Ara2\Files\jQuery\jquery-migrate-1_2_1_min.js" />
-    <Content Include="Ara2\Files\jQuery\jquery-ui-1_11_2_custom_min.js" />
-    <Content Include="Ara2\Files\jQuery\jquery_ui_touch-punch.js" />
-    <Content Include="Ara2\Files\Kiosk\AraKiosk.html" />
     <Content Include="ItemTemplates\AraDesign\Definitions\Web.csharp.vstemplate">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -350,12 +643,67 @@
     <Content Include="ItemTemplates\AraDesignMain\Definitions\Web.csharp.vstemplate" />
     <EmbeddedResource Include="ItemTemplates\AraDesignMain\Modelo\FrmMain.cstp" />
     <EmbeddedResource Include="ItemTemplates\AraDesignMain\Modelo\FrmMain.AraDesign" />
-    <None Include="Ara2\CREDITS.md" />
-    <None Include="Ara2\LICENSE.md" />
+    <Content Include="LICENSE.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="CREDITS.txt" />
     <None Include="packages.config" />
     <None Include="Properties\template-builder.props" />
-    <EmbeddedResource Include="Resources\ServidorWeb\Web.config" />
-    <EmbeddedResource Include="Resources\ServidorWeb\Config.config" />
+    <Content Include="Resources\ServidorWeb\Web.config">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Config.config">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraButton\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraButton\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraCheckbox\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraCheckbox\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraDiv\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraDiv\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraGridOfIcons\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraGridOfIcons\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraGrid\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraGrid\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraIFrame\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraIFrame\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraImage\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraImage\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraLabel\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraLabel\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraMenu\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraMenu\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraProgressbar\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraProgressbar\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraRadio\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraRadio\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraSelect\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraSelect\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraSplitContainers\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraSplitContainers\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraTable\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraTable\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraTabs\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraTabs\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraTextArea\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraTextArea\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraTextBox\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraTextBox\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraTimer\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraTimer\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraUpload\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraUpload\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraWindowTaskBar\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraWindowTaskBar\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraWindow\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraWindow\LICENSE.md" />
+    <Content Include="Resources\ServidorWeb\Ara2\CREDITS.md">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
+    <Content Include="Resources\ServidorWeb\Ara2\LICENSE.md">
+      <IncludeInVSIX>true</IncludeInVSIX>
+    </Content>
     <None Include="source.extension.vsixmanifest">
       <SubType>Designer</SubType>
     </None>

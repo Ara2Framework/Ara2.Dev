@@ -8,11 +8,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("Ara2.Dev.VS")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Editor Visual para AraFramework")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Tecnomips")]
+[assembly: AssemblyCompany("rafaelleonel")]
 [assembly: AssemblyProduct("Ara2.Dev.VS")]
-[assembly: AssemblyCopyright("")]
+[assembly: AssemblyCopyright("Copyright (c) 2010-2016, Rafael Leonel Pontani. All rights reserved.")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]   
 [assembly: ComVisible(true)]
@@ -31,6 +31,5 @@ using System.Runtime.InteropServices;
 
 //[assembly: AssemblyVersion("1.0.*")]
 [assembly: AssemblyFileVersion("1.0.*")]
-
-
+[assembly: Guid("B19CDAE0-7F37-4245-8B45-2AB0BC792E41")]
 

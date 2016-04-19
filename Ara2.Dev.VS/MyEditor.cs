@@ -106,11 +106,12 @@ namespace Tecnomips.Ara2_Dev_VS
                 if (ServiceHost == null)
                     ServiceHost = new ClienteServerChannel<IPakServerAraDevEdit, PakVisualStudio, IPakVisualStudio>(new PakVisualStudio(this), NewRandowPort(), NewRandowPort());
 
-                #if (!DEBUG)
+                //#if (!DEBUG)
                     var vUrl = StartIISExpress.Star(Path.GetDirectoryName(FileProject));
-                #else
-                    var vUrl = "http://localhost:45374/";
-                #endif
+                //#else
+                //    var vUrl = "http://localhost:45374/";
+                //#endif
+
 
                 Web.Url = new Uri(vUrl + "?FileProject=" + FileProject + "&File=" + _File + "&AraDevEditPort=" + ServiceHost.Cliente.Porta + "&VSPort=" + ServiceHost.Server.Porta);
             }
