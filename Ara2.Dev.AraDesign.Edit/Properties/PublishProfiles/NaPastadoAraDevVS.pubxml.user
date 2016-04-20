@@ -2347,13 +2347,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2016 11:22:34</publishTime>
     </File>
     <File Include="bin/Ara2.Dev.AraDesign.dll">
-      <publishTime>04/18/2016 15:47:11</publishTime>
+      <publishTime>04/20/2016 08:06:50</publishTime>
     </File>
     <File Include="bin/Ara2.Dev.AraDesign.Edit.dll">
-      <publishTime>04/18/2016 16:15:04</publishTime>
+      <publishTime>04/20/2016 08:06:53</publishTime>
     </File>
     <File Include="bin/Ara2.Dev.AraDesign.Edit.Service.dll">
-      <publishTime>04/18/2016 15:47:11</publishTime>
+      <publishTime>04/20/2016 08:06:50</publishTime>
     </File>
     <File Include="bin/Ara2.dll">
       <publishTime>04/17/2016 08:54:44</publishTime>
@@ -2374,10 +2374,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/15/2016 18:29:44</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>04/18/2016 16:14:40</publishTime>
+      <publishTime>04/19/2016 18:43:03</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>04/08/2016 08:38:44</publishTime>
+      <publishTime>04/20/2016 08:11:49</publishTime>
     </File>
   </ItemGroup>
 </Project>
