@@ -1,0 +1,101 @@
+﻿<VSTemplateManifest Version="1.0" xmlns="http://schemas.microsoft.com/developer/vstemplatemanifest/2015">
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\AraDesignMain\My Custom Templates\AraDesignMain.csharp</RelativePathOnDisk>
+    <TemplateFileName>AraDesignMain.csharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <ProjectType>CSharp</ProjectType>
+        <DefaultName>Default</DefaultName>
+        <Name>AraDesignMain</Name>
+        <Description>Canvas Main (Pagina inicial que envia o AraKernel) no MVC pode ser chamado de controller</Description>
+        <Icon>icon.png</Icon>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <TemplateID>f4c2f594-c3d3-4c82-a332-81aa5fb4af4f</TemplateID>
+        <SortOrder>1000</SortOrder>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\Web\My Custom Templates\AraDesignMain.web.csharp</RelativePathOnDisk>
+    <TemplateFileName>AraDesignMain.web.csharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <ProjectType>Web</ProjectType>
+        <ProjectSubType>CSharp</ProjectSubType>
+        <DefaultName>Default</DefaultName>
+        <Name>AraDesignMain</Name>
+        <Description>Canvas Main (Pagina inicial que envia o AraKernel) no MVC pode ser chamado de controller</Description>
+        <Icon>icon.png</Icon>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <TemplateID>eadf098d-bba8-4acf-81b5-4e443ea8b3d9</TemplateID>
+        <SortOrder>1000</SortOrder>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\AraDesign\My Custom Templates\AraDesign.csharp</RelativePathOnDisk>
+    <TemplateFileName>AraDesign.csharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <ProjectType>CSharp</ProjectType>
+        <DefaultName>AraDesign</DefaultName>
+        <Name>AraDesign</Name>
+        <Description>Canvas de desenhos para Ara Framwork</Description>
+        <Icon>icon.png</Icon>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <TemplateID>0e8b73d1-9df6-436f-b76f-94b0c448cefd</TemplateID>
+        <SortOrder>1000</SortOrder>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>CSharp\Web\My Custom Templates\AraDesign.web.csharp</RelativePathOnDisk>
+    <TemplateFileName>AraDesign.web.csharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <ProjectType>Web</ProjectType>
+        <ProjectSubType>CSharp</ProjectSubType>
+        <DefaultName>AraDesign</DefaultName>
+        <Name>AraDesign</Name>
+        <Description>Canvas de desenhos para Ara Framwork</Description>
+        <Icon>icon.png</Icon>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <TemplateID>c6bc4fd5-287d-459b-96aa-cba4aa2ffd6e</TemplateID>
+        <SortOrder>1000</SortOrder>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>AraDesign\Definitions\</RelativePathOnDisk>
+    <TemplateFileName>Web.csharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <ProjectType>Web</ProjectType>
+        <ProjectSubType>CSharp</ProjectSubType>
+        <DefaultName>AraDesign</DefaultName>
+        <Name>AraDesign</Name>
+        <Description>Canvas de desenhos para Ara Framwork</Description>
+        <Icon>icon.png</Icon>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <TemplateID>c6bc4fd5-287d-459b-96aa-cba4aa2ffd6e</TemplateID>
+        <SortOrder>1000</SortOrder>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+  <VSTemplateContainer TemplateType="Item">
+    <RelativePathOnDisk>AraDesign\Definitions\</RelativePathOnDisk>
+    <TemplateFileName>CSharp.vstemplate</TemplateFileName>
+    <VSTemplateHeader>
+      <TemplateData xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+        <ProjectType>CSharp</ProjectType>
+        <DefaultName>AraDesign</DefaultName>
+        <Name>AraDesign</Name>
+        <Description>Canvas de desenhos para Ara Framwork</Description>
+        <Icon>icon.png</Icon>
+        <NumberOfParentCategoriesToRollUp>1</NumberOfParentCategoriesToRollUp>
+        <TemplateID>0e8b73d1-9df6-436f-b76f-94b0c448cefd</TemplateID>
+        <SortOrder>1000</SortOrder>
+      </TemplateData>
+    </VSTemplateHeader>
+  </VSTemplateContainer>
+</VSTemplateManifest>

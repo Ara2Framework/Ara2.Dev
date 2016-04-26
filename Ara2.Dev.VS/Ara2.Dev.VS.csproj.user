@@ -3,7 +3,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>C:\Program Files %28x86%29\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe</StartProgram>
-    <StartArguments>/rootsuffix Exp "E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.Teste.sln"</StartArguments>
+    <StartArguments>/rootsuffix Exp "E:\Tecnomips\Ara.Net2\InteraguasWeb\InteraguasWeb.sln"</StartArguments>
   </PropertyGroup>
   <PropertyGroup>
     <PublishUrlHistory />

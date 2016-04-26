@@ -30,3 +30,7 @@ E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\Ara2.AraTimer.dll
 E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\Ara2.AraWindow.dll
 E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\Ara2.Components.Upload.dll
 E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\Ara2.ToolsExtension.dll
+E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\Ara2.AraForeignKey.dll
+E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\Dynamic.dll
+E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\EPPlus.dll
+E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\EPPlus.xml

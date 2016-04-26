@@ -240,7 +240,16 @@ namespace Ara2.Dev.AraDesign.Edit
                     if (vTypeCanvasReal == typeof(WindowMain))
                         CanvasReal = new CWindowMain();
                     else
-                        CanvasReal = (IAraDev)Activator.CreateInstance(vTypeCanvasReal, (dynamic)this);
+                    {
+                        try
+                        {
+                            CanvasReal = (IAraDev)Activator.CreateInstance(vTypeCanvasReal, (IAraObject)(dynamic)this);
+                        }
+                        catch(Exception err)
+                        {
+                            throw new Exception("Erro on load class '" + vJSon.Canvas.TypeAssembly + "'",err);
+                        }
+                    }
                     CanvasProperties = new CanvasProperties()
                     {
                         NameSpace = vJSon.Canvas.NameSpace,
@@ -425,7 +434,16 @@ namespace Ara2.Dev.AraDesign.Edit
 
         public IAraDev AddObjectInternal(Type vType, IAraObject vObjPai)
         {
-            IAraDev vTmpObj = (IAraDev)Activator.CreateInstance(vType, (dynamic)vObjPai);
+            IAraDev vTmpObj=null;
+            try
+            {
+                vTmpObj = (IAraDev)Activator.CreateInstance(vType, vObjPai);
+            }
+            catch (Exception err)
+            {
+                throw new Exception("Erro on load class '" + vType.AssemblyQualifiedName + "'", err);
+            }
+
             vTmpObj.Name = vTmpObj.InstanceID;
             vTmpObj.CssAddClass("Ara2DevBordaTracejada");
             vTmpObj.StartEditPropertys += this_StartEditPropertys;
@@ -487,10 +505,10 @@ namespace Ara2.Dev.AraDesign.Edit
         #region Type
         public Type GetTypeByName(string vNameFull)
         {
-            Type vTmpType;
+            
             try
             {
-                vTmpType = References.Components.Where(a => a.AssemblyQualifiedName == vNameFull).First();
+                return References.Components.Where(a => a.AssemblyQualifiedName == vNameFull).First();
             }
             catch
             {
@@ -498,15 +516,14 @@ namespace Ara2.Dev.AraDesign.Edit
                 {
                     string STypeAssembly2 = vNameFull.Substring(0, vNameFull.IndexOf(","));
 
-                    vTmpType = References.Components.Where(a => a.FullName == STypeAssembly2).First();
+                    Type vTmpType = References.Components.Where(a => a.FullName == STypeAssembly2).First();
+                    return vTmpType;
                 }
                 catch
                 {
                     throw new Exception("Assembly '" + vNameFull + "' no load!");
                 }
             }
-
-            return vTmpType;
         }
 
         private string GetTypeToString(Type vType)
