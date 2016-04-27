@@ -945,6 +945,11 @@ namespace Ara2.Dev.AraDesign.Edit
             return vArray.ToArray();
         }
 
+        public new void Dispose()
+        {
+            References.Dispose();
+            References = null;
+        }
 
     }
 }

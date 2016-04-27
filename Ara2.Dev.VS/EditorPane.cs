@@ -258,24 +258,31 @@ namespace Tecnomips.Ara2_Dev_VS
 
             foreach (var vType in editorControl.ProjectReferences.Components.Where(a => !ListaJaAdd.Contains(a)))
             {
-                var DevComponent = vType.GetCustomAttribute<Ara2.Dev.AraDevComponent>();
+                try
+                {
+                    var DevComponent = vType.GetCustomAttribute<Ara2.Dev.AraDevComponent>();
 
-                // Create the data object that will store the data for the menu item.
-                var toolboxData = new OleDataObject();
-                toolboxData.SetData(typeof(Ara2.Dev.IAraDev), vType);
+                    // Create the data object that will store the data for the menu item.
+                    var toolboxData = new OleDataObject();
+                    toolboxData.SetData(typeof(Ara2.Dev.IAraDev), vType);
 
-                // Get the toolbox service
+                    // Get the toolbox service
 
 
-                // Create the array of TBXITEMINFO structures to describe the items
-                // we are adding to the toolbox.
-                TBXITEMINFO[] itemInfo = new TBXITEMINFO[1];
-                itemInfo[0].bstrText = vType.Name;
-                itemInfo[0].hBmp = IntPtr.Zero;
-                itemInfo[0].dwFlags = (uint)__TBXITEMINFOFLAGS.TBXIF_DONTPERSIST;
+                    // Create the array of TBXITEMINFO structures to describe the items
+                    // we are adding to the toolbox.
+                    TBXITEMINFO[] itemInfo = new TBXITEMINFO[1];
+                    itemInfo[0].bstrText = vType.Name;
+                    itemInfo[0].hBmp = IntPtr.Zero;
+                    itemInfo[0].dwFlags = (uint)__TBXITEMINFOFLAGS.TBXIF_DONTPERSIST;
 
-                ErrorHandler.ThrowOnFailure(toolbox.AddItem(toolboxData, itemInfo, "Ara2"));
-                ListaJaAdd.Add(vType);
+                    ErrorHandler.ThrowOnFailure(toolbox.AddItem(toolboxData, itemInfo, "Ara2"));
+                    ListaJaAdd.Add(vType);
+                }
+                catch 
+                {
+                    
+                }
             }
         }
 
@@ -2002,6 +2009,7 @@ namespace Tecnomips.Ara2_Dev_VS
         /// <returns>S_OK if the function succeeds</returns>
         int IVsPersistDocData.Close()
         {
+            editorControl.Close();
             return VSConstants.S_OK;
         }
 

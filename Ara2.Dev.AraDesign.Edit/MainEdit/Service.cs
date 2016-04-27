@@ -59,6 +59,11 @@ namespace Ara2.Dev.AraDesign.Edit.Service
 
         #endregion
 
+        public void Close()
+        {
+            MainEdit.Dispose();
+        }
+
         public bool GetPendingToSave()
         {
             try

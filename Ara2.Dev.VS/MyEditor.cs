@@ -107,9 +107,9 @@ namespace Tecnomips.Ara2_Dev_VS
                     ServiceHost = new ClienteServerChannel<IPakServerAraDevEdit, PakVisualStudio, IPakVisualStudio>(new PakVisualStudio(this), NewRandowPort(), NewRandowPort());
 
                 //#if (!DEBUG)
-                var vUrl = StartIISExpress.Star(Path.GetDirectoryName(FileProject));
+                //var vUrl = StartIISExpress.Star(Path.GetDirectoryName(FileProject));
                 //#else
-                //var vUrl = "http://localhost:45374/";
+                var vUrl = "http://localhost:45374/";
                 //#endif
 
 
@@ -207,7 +207,9 @@ namespace Tecnomips.Ara2_Dev_VS
 
         public void Close()
         {
-
+            ProjectReferences.Dispose();
+            ProjectReferences = null;
+            ServiceHost.Cliente.Channel(a => a.Close());
         }
 
         bool _ReadOnly = false;

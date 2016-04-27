@@ -83,6 +83,12 @@ namespace Ara2.Dev.AraDesign.Edit
         public void OnObjetoSendoEditado(string[] Names)
         {
             VS.Cliente.Channel(a => a.SetObjectsEdit(Names));
+        }
+        
+        public new void Dispose()
+        {
+            Edit.Dispose();
+            base.Dispose();
         } 
     }
 }  

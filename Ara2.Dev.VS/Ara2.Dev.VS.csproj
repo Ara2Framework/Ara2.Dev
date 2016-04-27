@@ -515,6 +515,7 @@
     <Content Include="Resources\ServidorWeb\Ara2\Files\Kiosk\AraKiosk.html">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Resources\ServidorWeb\bin\Ara2.AraForeignKey.dll" />
     <Content Include="Resources\ServidorWeb\bin\Ara2.Dev.AraDesign.dll">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -527,6 +528,8 @@
     <Content Include="Resources\ServidorWeb\bin\Ara2.dll">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
+    <Content Include="Resources\ServidorWeb\bin\Dynamic.dll" />
+    <Content Include="Resources\ServidorWeb\bin\EPPlus.dll" />
     <Content Include="Resources\ServidorWeb\Default.aspx">
       <IncludeInVSIX>true</IncludeInVSIX>
     </Content>
@@ -662,6 +665,8 @@
     <None Include="Resources\ServidorWeb\Ara2\Components\AraCheckbox\LICENSE.md" />
     <None Include="Resources\ServidorWeb\Ara2\Components\AraDiv\CREDITS.md" />
     <None Include="Resources\ServidorWeb\Ara2\Components\AraDiv\LICENSE.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraForeignKeyLinq\CREDITS.md" />
+    <None Include="Resources\ServidorWeb\Ara2\Components\AraForeignKeyLinq\LICENSE.md" />
     <None Include="Resources\ServidorWeb\Ara2\Components\AraGridOfIcons\CREDITS.md" />
     <None Include="Resources\ServidorWeb\Ara2\Components\AraGridOfIcons\LICENSE.md" />
     <None Include="Resources\ServidorWeb\Ara2\Components\AraGrid\CREDITS.md" />

@@ -2356,13 +2356,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/20/2016 09:59:50</publishTime>
     </File>
     <File Include="bin/Ara2.Dev.AraDesign.dll">
-      <publishTime>04/20/2016 08:16:29</publishTime>
+      <publishTime>04/27/2016 16:31:39</publishTime>
     </File>
     <File Include="bin/Ara2.Dev.AraDesign.Edit.dll">
-      <publishTime>04/26/2016 09:03:35</publishTime>
+      <publishTime>04/27/2016 16:31:41</publishTime>
     </File>
     <File Include="bin/Ara2.Dev.AraDesign.Edit.Service.dll">
-      <publishTime>04/20/2016 08:16:28</publishTime>
+      <publishTime>04/27/2016 16:31:38</publishTime>
     </File>
     <File Include="bin/Ara2.dll">
       <publishTime>04/17/2016 08:54:44</publishTime>

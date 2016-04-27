@@ -102,6 +102,8 @@ namespace Ara2.Dev.AraDesign.Edit.Service
         [OperationContract]
         void SetClassNameAraDesign(string vTypeName);
 
+        [OperationContract]
+        void Close();
     }
     
 
