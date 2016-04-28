@@ -1,6 +1,5 @@
 E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit.Service\bin\Release\Ara2.Dev.AraDesign.Edit.Service.dll
 E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit.Service\bin\Release\Ara2.Dev.AraDesign.Edit.Service.pdb
-E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit.Service\bin\Release\Ara2.dll
 E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit.Service\obj\Release\Ara2.Dev.AraDesign.Edit.Service.dll
 E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit.Service\obj\Release\Ara2.Dev.AraDesign.Edit.Service.pdb
 E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit.Service\obj\Release\Ara2.Dev.AraDesign.Edit.Service.csprojResolveAssemblyReference.cache

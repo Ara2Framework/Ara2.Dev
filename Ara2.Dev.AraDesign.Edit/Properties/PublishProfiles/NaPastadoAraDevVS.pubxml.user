@@ -1894,28 +1894,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/22/2016 15:17:17</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/AraGrid.js">
-      <publishTime>04/26/2016 08:13:56</publishTime>
+      <publishTime>04/28/2016 14:58:27</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/CREDITS.md">
-      <publishTime>04/26/2016 08:13:56</publishTime>
+      <publishTime>04/28/2016 14:58:27</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/files/grid_locale-pt-br.js">
-      <publishTime>04/26/2016 08:13:56</publishTime>
+      <publishTime>04/28/2016 14:58:27</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/files/jquery_jqGrid_min.js">
-      <publishTime>04/26/2016 08:13:56</publishTime>
+      <publishTime>04/28/2016 14:58:27</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/files/jquery_jqGrid_src.js">
-      <publishTime>04/26/2016 08:13:56</publishTime>
+      <publishTime>04/28/2016 14:58:27</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/files/ui_jqgrid.css">
-      <publishTime>04/26/2016 08:13:56</publishTime>
+      <publishTime>04/28/2016 14:58:27</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/files/ui_jqgrid_Ara2.css">
-      <publishTime>04/26/2016 08:13:56</publishTime>
+      <publishTime>04/28/2016 14:58:27</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/LICENSE.md">
-      <publishTime>04/26/2016 08:13:56</publishTime>
+      <publishTime>04/28/2016 14:58:27</publishTime>
     </File>
     <File Include="Ara2/Components/AraGridOfIcons/AraGridOfIcons.js">
       <publishTime>04/18/2016 16:14:28</publishTime>
@@ -1945,13 +1945,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2016 16:14:30</publishTime>
     </File>
     <File Include="Ara2/Components/AraLabel/AraLabel.js">
-      <publishTime>04/18/2016 16:14:30</publishTime>
+      <publishTime>04/28/2016 14:56:47</publishTime>
     </File>
     <File Include="Ara2/Components/AraLabel/CREDITS.md">
-      <publishTime>04/18/2016 16:14:30</publishTime>
+      <publishTime>04/28/2016 14:56:47</publishTime>
     </File>
     <File Include="Ara2/Components/AraLabel/LICENSE.md">
-      <publishTime>04/18/2016 16:14:30</publishTime>
+      <publishTime>04/28/2016 14:56:47</publishTime>
     </File>
     <File Include="Ara2/Components/AraMenu/AraMenu.js">
       <publishTime>04/18/2016 16:14:31</publishTime>
@@ -2110,184 +2110,184 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2016 16:14:38</publishTime>
     </File>
     <File Include="Ara2/Components/WindowMain/WindowMain.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/CREDITS.md">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/ClassAra.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/ClassAraAnchor.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/ClassAraClass.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/ClassAraComponent.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/ClassAraGenVarSend.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/ClassAraHttps.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/ClassAraTick.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/ClassAraTools.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/other/ie7/ie7-squish.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/other/ie7/IE7.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/other/ie7/IE8.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/other/ie7/IE9.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/other/jquery_printElement.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/other/jquery_selectboxes.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraKernel/other/json2.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/AraScrollBar/AraScrollBar.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/BrowserNotSupported/BrowserNotSupported.html">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/Carregando.gif">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/AraJQuery.css">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-bg_diagonals-thick_90_eeeeee_40x40.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-bg_flat_15_cd0a0a_40x100.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-bg_glass_100_e4f1fb_1x400.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-bg_glass_50_3baae3_1x400.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-bg_glass_80_d7ebf9_1x400.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-bg_highlight-hard_100_f2f5f7_1x100.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-bg_highlight-hard_70_000000_1x100.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-bg_highlight-soft_100_deedf7_1x100.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-bg_highlight-soft_25_ffef8f_1x100.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-icons_2694e8_256x240.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-icons_2e83ff_256x240.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-icons_3d80b3_256x240.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-icons_72a7cf_256x240.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/images/ui-icons_ffffff_256x240.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/cupertino_1_11/jquery-ui_min.css">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/images/ui-anim_basic_16x16.gif">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-bg_diagonals-thick_18_b81900_40x40.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-bg_diagonals-thick_20_666666_40x40.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-bg_flat_10_000000_40x100.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-bg_glass_100_f6f6f6_1x400.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-bg_glass_100_fdf5ce_1x400.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-bg_glass_65_ffffff_1x400.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-bg_gloss-wave_35_f6a828_500x100.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-bg_highlight-soft_100_eeeeee_1x100.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-bg_highlight-soft_75_ffe45c_1x100.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-icons_222222_256x240.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-icons_228ef1_256x240.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-icons_ef8c08_256x240.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-icons_ffd27a_256x240.png">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/images/ui-icons_ffffff_256x240.png">
-      <publishTime>04/18/2016 16:14:24</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/css/ui_lightness/jquery-ui-1_9_2_custom.css">
-      <publishTime>04/18/2016 16:14:24</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/jquery-1_11_1_min.js">
-      <publishTime>04/18/2016 16:14:24</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/jquery-cookie.js">
-      <publishTime>04/18/2016 16:14:24</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/jquery-migrate-1_2_1_min.js">
-      <publishTime>04/18/2016 16:14:24</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/jquery-ui-1_11_2_custom_min.js">
-      <publishTime>04/18/2016 16:14:24</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/jQuery/jquery_ui_touch-punch.js">
-      <publishTime>04/18/2016 16:14:24</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/JQueryScoolBar/jquery_nicescroll.js">
-      <publishTime>04/18/2016 16:14:25</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/Files/Kiosk/AraKiosk.html">
-      <publishTime>04/18/2016 16:14:24</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/LICENSE.md">
-      <publishTime>04/18/2016 16:14:24</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Ara2/ManifestResourceStreamToPathFile2.json">
       <publishTime>04/14/2016 09:52:50</publishTime>
@@ -2305,7 +2305,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/25/2016 08:30:22</publishTime>
     </File>
     <File Include="bin/Ara2.AraGrid.dll">
-      <publishTime>04/24/2016 21:44:34</publishTime>
+      <publishTime>04/27/2016 10:54:58</publishTime>
     </File>
     <File Include="bin/Ara2.AraGridOfIcons.dll">
       <publishTime>04/18/2016 08:54:50</publishTime>
@@ -2317,7 +2317,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2016 09:10:40</publishTime>
     </File>
     <File Include="bin/Ara2.AraLabel.dll">
-      <publishTime>04/17/2016 18:28:46</publishTime>
+      <publishTime>04/27/2016 10:32:34</publishTime>
     </File>
     <File Include="bin/Ara2.AraMenu.dll">
       <publishTime>04/18/2016 08:31:36</publishTime>
@@ -2356,16 +2356,16 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/20/2016 09:59:50</publishTime>
     </File>
     <File Include="bin/Ara2.Dev.AraDesign.dll">
-      <publishTime>04/27/2016 16:31:39</publishTime>
+      <publishTime>04/28/2016 15:29:49</publishTime>
     </File>
     <File Include="bin/Ara2.Dev.AraDesign.Edit.dll">
-      <publishTime>04/27/2016 16:31:41</publishTime>
+      <publishTime>04/28/2016 15:29:52</publishTime>
     </File>
     <File Include="bin/Ara2.Dev.AraDesign.Edit.Service.dll">
-      <publishTime>04/27/2016 16:31:38</publishTime>
+      <publishTime>04/28/2016 15:29:49</publishTime>
     </File>
     <File Include="bin/Ara2.dll">
-      <publishTime>04/17/2016 08:54:44</publishTime>
+      <publishTime>04/28/2016 15:13:56</publishTime>
     </File>
     <File Include="bin/Ara2.ToolsExtension.dll">
       <publishTime>04/18/2016 11:43:16</publishTime>
@@ -2392,7 +2392,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/15/2016 18:29:44</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>04/26/2016 08:15:22</publishTime>
+      <publishTime>04/28/2016 15:27:26</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>04/20/2016 08:11:49</publishTime>

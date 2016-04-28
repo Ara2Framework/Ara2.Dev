@@ -32,6 +32,8 @@ namespace Ara2.Dev.AraDesign.Edit
                 !string.IsNullOrEmpty(Tick.Page.Request["FileProject"]) && File.Exists(Tick.Page.Request["FileProject"])
                 && !string.IsNullOrEmpty(Tick.Page.Request["File"]) && File.Exists(Tick.Page.Request["File"]))
             {
+                //Tick.Session.UrlRedirectFiles = "file://" +  Path.GetDirectoryName(Tick.Page.Request["FileProject"]).Replace("\\","/") + "/";
+
                 Timer.tick += Timer_tick;
                 Timer.Interval = 1000;
                 Timer.Enabled = true;

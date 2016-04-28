@@ -113,7 +113,8 @@ namespace Tecnomips.Ara2_Dev_VS
                 //#endif
 
 
-                Web.Url = new Uri(vUrl + "?FileProject=" + FileProject + "&File=" + _File + "&AraDevEditPort=" + ServiceHost.Cliente.Porta + "&VSPort=" + ServiceHost.Server.Porta);
+                string vUrlTmp = vUrl + "?FileProject=" + FileProject + "&File=" + _File + "&AraDevEditPort=" + ServiceHost.Cliente.Porta + "&VSPort=" + ServiceHost.Server.Porta;
+                Web.Url = new Uri(vUrlTmp);
             }
         }
 

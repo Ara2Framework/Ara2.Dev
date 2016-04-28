@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using Ara2;
 using System.Web.Configuration;
 using Ara2.Dev.AraDesign.Edit.Tools;
+using System.IO;
 
 namespace Ara2.Dev.AraDesign.Edit
 {
@@ -35,6 +36,23 @@ namespace Ara2.Dev.AraDesign.Edit
                 return Config.Get["Skin"];
             else
                 return base.GetJQueryUICss();
+        }
+
+        //public override void BeforeReceivingTick()
+        //{
+        //    Tick Tick = Tick.GetTick();
+        //    if (Tick.Session.UrlRedirectFiles ==null && !string.IsNullOrWhiteSpace(Tick.Page.Request["FileProject"]))
+        //        Tick.Session.UrlRedirectFiles = "?FileKey=" + this.GetKeySendFile() + "&File=" + Path.GetDirectoryName(Tick.Page.Request["FileProject"]) + "\\";
+        //        //Tick.Session.UrlRedirectFiles = "file:///" + Path.GetDirectoryName(Tick.Page.Request["FileProject"]).Replace("\\", "/") + "/";
+        //}
+
+        public override string GetUrlRedirectFiles(string vFile)
+        {
+            MainEdit vMainEdit = MainEdit.GetInstance();
+            if (vMainEdit!=null && vMainEdit.Edit!=null && vMainEdit.Edit.FileProject !=null)
+                return "?FileKey=" + this.GetKeySendFile() + "&File=" + Path.GetDirectoryName(vMainEdit.Edit.FileProject.FullName) + "\\" + vFile;
+            else
+                return vFile;
         }
     }
 }
