@@ -34,4 +34,3 @@ E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\Ara2.AraForeignKey.dl
 E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\Dynamic.dll
 E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\EPPlus.dll
 E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\EPPlus.xml
-E:\Tecnomips\Ara.Net2\Ara2.Dev\Ara2.Dev.AraDesign.Edit\bin\Ara2.pdb

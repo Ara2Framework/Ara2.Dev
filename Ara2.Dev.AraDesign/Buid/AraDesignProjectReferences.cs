@@ -14,14 +14,18 @@ namespace Ara2.Dev.AraDesign
     {
         public List<Type> Components = new List<Type>();
         public List<Assembly> Assemblys = new List<Assembly>();
+        //private AppDomain domain;
 
         public AraDesignProjectReferences(FileInfo FileProject)
         {
+            //domain = AppDomain.CreateDomain("MyDomain");
+
+            Assemblys = new List<Assembly>();
+            Assemblys.Add(Assembly.Load("Ara2"));
+
             AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
             try
             {
-                Assemblys = new List<Assembly>();
-
                 string vFileProject = FileProject.FullName;
 
                 var PastaProjeto = Path.GetDirectoryName(vFileProject);
@@ -43,7 +47,7 @@ namespace Ara2.Dev.AraDesign
                             //string vTmpPathFile = Tmp2.Attribute("Include").Value;
                             string vDll = Path.Combine(PastaProjeto, Tmp2.Element(msbuild + "HintPath").Value);
                             if (File.Exists(vDll))
-                                AddDll(ref Assemblys, vDll);
+                                AddDll(vDll);
                         }
 
                     }
@@ -104,7 +108,7 @@ namespace Ara2.Dev.AraDesign
                                         p.WaitForExit();
 
                                         if (File.Exists(vDll))
-                                            AddDll(ref Assemblys, vDll);
+                                            AddDll(vDll);
                                     }
                                     else
                                         throw new Exception("msbuild not found '" + vMsBuild + "'.\n Config.xml FW= '" + vFWVercion + "'");
@@ -115,7 +119,7 @@ namespace Ara2.Dev.AraDesign
                                 }
                             }
                             else
-                                AddDll(ref Assemblys, vDll);
+                                AddDll(vDll);
                         }
                     }
                 }
@@ -160,26 +164,40 @@ namespace Ara2.Dev.AraDesign
                 throw new Exception(args.Name + " not found");
         }
 
-        private void AddDll(ref List<Assembly> vAssembly, string vDll)
+        private void AddDll(string vDll)
         {
             try
             {
-                var vAs = Assembly.LoadFile(vDll);
+                byte[] oFileBytes = null;
+                using (System.IO.FileStream fs = System.IO.File.Open(vDll, System.IO.FileMode.Open, System.IO.FileAccess.Read, System.IO.FileShare.ReadWrite))
+                {
+                    int numBytesToRead = Convert.ToInt32(fs.Length);
+                    oFileBytes = new byte[(numBytesToRead)];
+                    fs.Read(oFileBytes, 0, numBytesToRead);
+                    fs.Close();
+                }
+
+                var vAs = Assembly.Load(oFileBytes);
+                oFileBytes = null;
+
                 if (vAs.GetName().Name != "Ara2")
                 {
-                    if (!vAssembly.Exists(a => a != null && a.FullName == vAs.FullName))
-                        vAssembly.Add(vAs);
+                    if (!Assemblys.Exists(a => a != null && a.FullName == vAs.FullName))
+                        Assemblys.Add(vAs);
                 }
-                else
-                    vAssembly.Add(Assembly.Load("Ara2"));
+
             }
-            catch { }
+            catch (Exception err)
+            {
+
+            }
         }
 
         public void  Dispose()
         {
             Components.Clear();
             Assemblys.Clear();
+            //AppDomain.Unload(domain);
         }
     }
 }

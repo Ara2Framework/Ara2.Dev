@@ -8,6 +8,7 @@ using System.IO;
 using Ara2.Dev.AraDesign;
 using System.Reflection;
 using System.Text;
+using Ara2.Dev.AraDesign.Tools;
 
 namespace Tecnomips.Ara2_Dev_VS
 {
@@ -24,7 +25,7 @@ namespace Tecnomips.Ara2_Dev_VS
 
             InitializeComponent();
             Web.PreviewKeyDown += Web_PreviewKeyDown;
-            
+            Config.Get.PathWebConfig = StartIISExpress.GetPathExtencion();
         }
 
         DateTime? UtmWeb_PreviewKeyDown = null;
@@ -208,9 +209,16 @@ namespace Tecnomips.Ara2_Dev_VS
 
         public void Close()
         {
-            ProjectReferences.Dispose();
-            ProjectReferences = null;
-            ServiceHost.Cliente.Channel(a => a.Close());
+            if (ProjectReferences != null)
+            {
+                ProjectReferences.Dispose();
+                ProjectReferences = null;
+            }
+            try
+            {
+                ServiceHost.Cliente.Channel(a => a.Close());
+            }
+            catch { }
         }
 
         bool _ReadOnly = false;
@@ -266,7 +274,11 @@ namespace Tecnomips.Ara2_Dev_VS
             }
             catch { }
             ProjectReferences = null;
-            base.Dispose();
+            try
+            {
+                base.Dispose();
+            }
+            catch { }
         }
 
         ~MyEditor()

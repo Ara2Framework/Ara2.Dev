@@ -17,7 +17,11 @@
             {
                 components.Dispose();
             }
-            base.Dispose(disposing);
+            try
+            {
+                base.Dispose(disposing);
+            }
+            catch { }
         }
 
         #region Component Designer generated code
