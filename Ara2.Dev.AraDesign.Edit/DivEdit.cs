@@ -395,7 +395,7 @@ namespace Ara2.Dev.AraDesign.Edit
             {
                 AraDesignJSonCanvasChildren vTmpObj = new AraDesignJSonCanvasChildren(vObjC.GetType().FullName, vObjC.GetType().AssemblyQualifiedName);
 
-                if (vObjC is IAraContainerClient && ((IAraContainerClient)vObjC).Layouts != null)
+                if (vObjC is IAraContainerClient && ((IAraContainerClient)vObjC).Layouts != null && ((IAraContainerClient)vObjC).Layouts.GetLayoutCurrent()!=null)
                     ((IAraContainerClient)vObjC).Layouts.GetLayoutCurrent().Save();
 
                 List<IAraDesignJSonCanvasPropertys> JsonCanvasPropertys = new List<IAraDesignJSonCanvasPropertys>();

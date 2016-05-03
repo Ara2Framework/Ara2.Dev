@@ -68,8 +68,8 @@
       <HintPath>..\packages\Ara2.AraForeignKey.1.0.0.0\lib\net40\Ara2.AraForeignKey.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Ara2.AraGrid, Version=1.0.0.3, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ara2.AraGrid.1.0.0.3\lib\net40\Ara2.AraGrid.dll</HintPath>
+    <Reference Include="Ara2.AraGrid, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraGrid.1.0.0.4\lib\net40\Ara2.AraGrid.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ara2.AraGridOfIcons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -120,8 +120,8 @@
       <HintPath>..\packages\Ara2.AraTextArea.1.0.0.0\lib\net40\Ara2.AraTextArea.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Ara2.AraTextBox, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ara2.AraTextBox.1.0.0.0\lib\net40\Ara2.AraTextBox.dll</HintPath>
+    <Reference Include="Ara2.AraTextBox, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraTextBox.1.0.0.1\lib\net40\Ara2.AraTextBox.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ara2.AraTimer, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL">
@@ -325,8 +325,6 @@
     <Content Include="Ara2\Components\AraTabs\CREDITS.md" />
     <Content Include="Ara2\Components\AraTextArea\LICENSE.md" />
     <Content Include="Ara2\Components\AraTextArea\CREDITS.md" />
-    <Content Include="Ara2\Components\AraTextBox\LICENSE.md" />
-    <Content Include="Ara2\Components\AraTextBox\CREDITS.md" />
     <Content Include="Ara2\Components\AraTimer\LICENSE.md" />
     <Content Include="Ara2\Components\AraTimer\CREDITS.md" />
     <Content Include="Ara2\Components\AraWindow\LICENSE.md" />
@@ -339,10 +337,12 @@
     <Content Include="Ara2\Components\AraUpload\CREDITS.md" />
     <Content Include="Ara2\Components\AraLabel\LICENSE.md" />
     <Content Include="Ara2\Components\AraLabel\CREDITS.md" />
-    <Content Include="Ara2\Components\AraGrid\LICENSE.md" />
-    <Content Include="Ara2\Components\AraGrid\CREDITS.md" />
     <Content Include="Ara2\LICENSE.md" />
     <Content Include="Ara2\CREDITS.md" />
+    <Content Include="Ara2\Components\AraTextBox\LICENSE.md" />
+    <Content Include="Ara2\Components\AraTextBox\CREDITS.md" />
+    <Content Include="Ara2\Components\AraGrid\LICENSE.md" />
+    <Content Include="Ara2\Components\AraGrid\CREDITS.md" />
     <None Include="FrmLayout\FrmLayout.AraDesign.json" />
     <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\NaPastadoAraDevVS.pubxml" />

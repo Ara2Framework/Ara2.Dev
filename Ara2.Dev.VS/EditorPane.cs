@@ -321,25 +321,29 @@ namespace Tecnomips.Ara2_Dev_VS
 
         private void RemoverItensInuteisToolBox(IEnumerable<Type> vTypesR)
         {
-            IVsToolbox toolbox = (IVsToolbox)GetService(typeof(SVsToolbox));
-
-            IEnumToolboxItems items;
-            ErrorHandler.ThrowOnFailure(toolbox.EnumItems(null, out items));
-
-            List<Type> ListaJaAdd = new List<Type>();
-            uint num;
-            var rgelt = new Microsoft.VisualStudio.OLE.Interop.IDataObject[1];
-            for (int i = items.Next(1, rgelt, out num);
-                (ErrorHandler.Succeeded(i) && (num > 0)) && (rgelt[0] != null);
-                i = items.Next(1, rgelt, out num))
+            try
             {
-                OleDataObject voleData = new OleDataObject(rgelt[0]);
-                if (voleData.GetDataPresent(typeof(Ara2.Dev.IAraDev)))
+                IVsToolbox toolbox = (IVsToolbox)GetService(typeof(SVsToolbox));
+
+                IEnumToolboxItems items;
+                ErrorHandler.ThrowOnFailure(toolbox.EnumItems(null, out items));
+
+                List<Type> ListaJaAdd = new List<Type>();
+                uint num;
+                var rgelt = new Microsoft.VisualStudio.OLE.Interop.IDataObject[1];
+                for (int i = items.Next(1, rgelt, out num);
+                    (ErrorHandler.Succeeded(i) && (num > 0)) && (rgelt[0] != null);
+                    i = items.Next(1, rgelt, out num))
                 {
-                    if (vTypesR.Contains((Type)voleData.GetData(typeof(Ara2.Dev.IAraDev))))
-                        toolbox.RemoveItem(rgelt[0]);
+                    OleDataObject voleData = new OleDataObject(rgelt[0]);
+                    if (voleData.GetDataPresent(typeof(Ara2.Dev.IAraDev)))
+                    {
+                        if (vTypesR.Contains((Type)voleData.GetData(typeof(Ara2.Dev.IAraDev))))
+                            toolbox.RemoveItem(rgelt[0]);
+                    }
                 }
             }
+            catch { }
         }
 
 

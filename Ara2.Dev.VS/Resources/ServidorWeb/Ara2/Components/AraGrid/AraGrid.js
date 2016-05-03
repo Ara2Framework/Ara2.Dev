@@ -387,7 +387,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
 
     // Eventos Fim ---------------------------------------------------------------
 
-    
+
     this.GetRowSelect = function () {
         return JSON.stringify($(this.Obj).getGridParam('selarrrow'));
     }
@@ -488,7 +488,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
                 TmpThis.onSelectRow(vIds[vTmpIdN]);
             }
         };
-        
+
 
         vCommandCreate.onRightClickRow = function (rowid, iRow, iCol, e) {
             if (e.which == 0) {
@@ -578,8 +578,8 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
 
         $(this.Obj).jqGrid(vCommandCreate);
 
-        this.ObjDiv = $("#gbox_" + this.id); 
-        this.ObjDiv.css({ position: "absolute", top: this.Top , left: this.Left });
+        this.ObjDiv = $("#gbox_" + this.id);
+        this.ObjDiv.css({ position: "absolute", top: this.Top, left: this.Left });
 
 
         this.ObjDivScroolBar = this.Obj.parentNode.parentNode;
@@ -602,7 +602,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
         //    cursorwidth : "20px"
         //});
         //$(this.ObjDivScroolBar).niceScroll({ zindex :99988 });
-        
+
     }
 
     this.GetMaxZindexParantNode = function () {
@@ -618,7 +618,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
 
         return MaxIndex;
     };
-    
+
     this.EventAutoOrderCols = function (iCol, sortorder) {
         if (!this.AutoOrderCols) {
             var vColId = $(this.Obj).getGridParam('colModel')[iCol].name;
@@ -655,7 +655,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
         if (this.multiselect) {
             var TmpObjJQuery = $(this.Obj);
             var TmpRowId = rowid;
-            $("#jqg_" +  this.id + "_" + rowid).change(function () {
+            $("#jqg_" + this.id + "_" + rowid).change(function () {
                 TmpObjJQuery.jqGrid('setSelection', TmpRowId);
             });
         }
@@ -746,7 +746,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
         if (this.Top != vTmp) {
             this.Top = vTmp;
             if (this.IsCreate) {
-                this.ObjDiv.css({ top:this.Top });
+                this.ObjDiv.css({ top: this.Top });
             } else {
                 $(this.Obj).css({ top: this.Top });
             }
@@ -787,17 +787,21 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
     this.beforeSelectRow = function (rowid, evt) {
         var srcElement = evt.srcElement ? evt.srcElement : evt.target;
         if (srcElement.getAttribute("aria-describedby")) {
-            var vCol = srcElement.getAttribute("aria-describedby").substring(( this.id + "_").length);
+            var vCol = srcElement.getAttribute("aria-describedby").substring((this.id + "_").length);
             this.ClickCell(rowid, vCol, evt);
         }
     };
 
     this.CellEditValue = "";
+    this.CellEditValueBeforeFormatCell = "";
     this.CellEditTrue = Array();
     this.CellEditTrue_RowCol = Array();
     this.CellEditTrue_Value = Array();
+    this.CellEditSaveCellForcebyFormatCell = false;
 
     this.formatCell = function (rowid, colid, value, iRow, iCol) {
+        this.CellEditValueBeforeFormatCell = value;
+
         if (this.Tree) {
             if (this.TreeColCaption == colid) {
                 if (value.indexOf("<!--END-->") > 0) {
@@ -807,6 +811,14 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
                     return value;
                 }
             }
+        }
+
+        function RemuveTag(vText) {
+            return vText.replace(/<(\w+)[^>]*>.*<\/\1>/gi, "")
+        }
+
+        if (RemuveTag(value) != value) {
+            return $.trim(RemuveTag(value));
         }
     }
 
@@ -822,12 +834,8 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
     };
 
     this.beforeSaveCell = function (rowid, colid, value, iRow, iCol) {
-        if (this.CellEditValue != value) {
-            if (this.CellEditTrue_RowCol[rowid + "_" + colid] != true) {
-                this.CellEditTrue_RowCol[rowid + "_" + colid] = true;
-                this.CellEditTrue.push({ "rowid": rowid, "colid": colid })
-            }
-            this.CellEditTrue_Value[rowid + "_" + colid] = value;
+        if (this.CellEditValueBeforeFormatCell != value) {
+            this.CellEditSaveCellForcebyFormatCell = false;
 
             if (this.beforeSaveCellTime != null) {
                 clearInterval(this.beforeSaveCellTime);
@@ -835,6 +843,13 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
 
             var TmpThis = this;
             this.beforeSaveCellTime = setTimeout(function () {
+
+                if (TmpThis.CellEditTrue_RowCol[rowid + "_" + colid] != true) {
+                    TmpThis.CellEditTrue_RowCol[rowid + "_" + colid] = true;
+                    TmpThis.CellEditTrue.push({ "rowid": rowid, "colid": colid })
+                }
+                TmpThis.CellEditTrue_Value[rowid + "_" + colid] = value;
+
                 TmpThis.Events.ChangeCell.Function(rowid, colid, value);
                 TmpThis.beforeSaveCellTime = null;
             }, 100);
@@ -931,7 +946,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
     }
 
     this.GetIRowByRowId = function (vId) {
-        var TmpRows = document.getElementById( this.id ).childNodes[0].childNodes;
+        var TmpRows = document.getElementById(this.id).childNodes[0].childNodes;
 
         for (var NRow = 0; NRow < TmpRows.length; NRow++) {
             if (TmpRows[NRow])
@@ -947,7 +962,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
             this.StratEvents_ = true;
 
             var TmpThis = this;
-            $('#' +  this.id + '_kn').keydown(function (e) {
+            $('#' + this.id + '_kn').keydown(function (e) {
                 TmpThis.Events.KeyDown.Function(e);
             }).keypress(function (e) {
                 TmpThis.Events.KeyPress.Function(e);
@@ -967,27 +982,27 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
     this.Width = null;
     this.SetWidth = function (vTmp, vServer) {
         //if (this.Width != parseInt(vTmp, 10)) {
-            this.Width = parseInt(vTmp, 10);
-            if (vServer) this.ControlVar.SetValueUtm('Width', this.Width);
-            if (this.IsCreate) {
-                if ($(this.Obj).setGridWidth)
-                    $(this.Obj).setGridWidth(this.Width);
-            } else {
-                $(this.Obj).width(vTmp);
-            }
+        this.Width = parseInt(vTmp, 10);
+        if (vServer) this.ControlVar.SetValueUtm('Width', this.Width);
+        if (this.IsCreate) {
+            if ($(this.Obj).setGridWidth)
+                $(this.Obj).setGridWidth(this.Width);
+        } else {
+            $(this.Obj).width(vTmp);
+        }
 
-            if (!vServer)
-                this.Events.WidthChangeAfter.Function();
+        if (!vServer)
+            this.Events.WidthChangeAfter.Function();
 
-            if (this.Anchor != null)
-                this.Anchor.RenderChildren();
+        if (this.Anchor != null)
+            this.Anchor.RenderChildren();
         //}
     }
 
     this._MinHeight = null;
     this.SetMinHeight = function (vTmp) {
         this._MinHeight = vTmp;
-        if (this._MinHeight != null && this.Height != null && parseInt(this._MinHeight,10) > parseInt(this.Height, 10))
+        if (this._MinHeight != null && this.Height != null && parseInt(this._MinHeight, 10) > parseInt(this.Height, 10))
             this.SetHeight(this._MinHeight, false);
     }
 
@@ -996,19 +1011,19 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
     this.SetHeight = function (vTmp, vServer) {
         //if (this.Height != parseInt(vTmp,10)) {
         this.Height = parseInt(vTmp, 10);
-        if (vServer)  this.ControlVar.SetValueUtm('Height', this.Height);
-            if (this.IsCreate) {
-                if ($(this.Obj).setGridHeight)
-                    $(this.Obj).setGridHeight(this.Height - this.HeightBorder);
-            } else {
-                $(this.Obj).height(vTmp);
-            }
+        if (vServer) this.ControlVar.SetValueUtm('Height', this.Height);
+        if (this.IsCreate) {
+            if ($(this.Obj).setGridHeight)
+                $(this.Obj).setGridHeight(this.Height - this.HeightBorder);
+        } else {
+            $(this.Obj).height(vTmp);
+        }
 
-            if (!vServer)
-                this.Events.HeightChangeAfter.Function();
+        if (!vServer)
+            this.Events.HeightChangeAfter.Function();
 
-            if (this.Anchor != null)
-                this.Anchor.RenderChildren();
+        if (this.Anchor != null)
+            this.Anchor.RenderChildren();
         //}
     }
 
@@ -1026,7 +1041,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
     this.SetEnabled = function (vTmp) {
 
 
-        var NameObjEnabled =  this.id + "_objEnabled";
+        var NameObjEnabled = this.id + "_objEnabled";
         //var ObjEnabled = document.getElementById(NameObjEnabled);
         if (!this.ObjEnabled) {
             //$("<div class='ui-widget-overlay jqgrid-overlay' id='lui_" + this.id + "'></div>").append(ii).insertBefore(gv)
@@ -1124,7 +1139,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
             .removeClass(this.TreeIcoContract)
             .removeClass(this.TreeIcoLoad)
         ;
-        
+
 
         var MyCod = this.TreeRowID[vIdRow];
 
@@ -1186,7 +1201,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
 
     this.AutoAdjustColumnWidth_CVisble = function () {
 
-        this.Obj = document.getElementById( this.id);
+        this.Obj = document.getElementById(this.id);
         if (!this.Obj)
             return;
 
@@ -1209,7 +1224,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
         ObjTesteWJQ.html("AAA");
 
         if (ObjTesteWJQ.width() == 0) {
-            
+
             var TmpThis = this;
             setTimeout(function () { TmpThis.AutoAdjustColumnWidth_CVisble() }, 500);
             return;
@@ -1220,7 +1235,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
 
     this.ScrollBarResizeTimer = null;
     this.ScrollBarResize = function () {
-        
+
         if (this.ScrollBarResizeTimer)
             clearInterval(this.ScrollBarResizeTimer);
         var vTmpThis = this;
@@ -1246,12 +1261,12 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
             if (vCol.hidden == false) {
                 var vCodId = vCol.name;
 
-                var vObjCol = document.getElementById( this.id + "_" + vCodId);
+                var vObjCol = document.getElementById(this.id + "_" + vCodId);
 
                 if (vObjCol.nodeName.toUpperCase() != "TH")
                     vObjCol = vObjCol.parentNode;
 
-                $(ObjTesteW).html($(vObjCol).html()); 
+                $(ObjTesteW).html($(vObjCol).html());
 
                 ColsW[vCodId] = ObjTesteWJQ.width() + 35;
                 if (!ColsWID[vCodId])
@@ -1317,7 +1332,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
 
         $(this.Obj)[0].grid.resizing = { "idx": idx };
         $(this.Obj)[0].grid.newWidth = vWidth;
-        $(this.Obj)[0].grid.headers[idx].el = document.getElementById( this.id + "_" + vColId);
+        $(this.Obj)[0].grid.headers[idx].el = document.getElementById(this.id + "_" + vColId);
         $(this.Obj)[0].grid.headers[idx].newWidth = vWidth;
         $(this.Obj)[0].grid.headers[idx].width = vWidth;
         $(this.Obj)[0].grid.dragEnd();
@@ -1331,7 +1346,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
 
         if (vVisible) {
             if (this.DivObjLui) {
-                $(this.DivObjLui).css({ position: "absolute"});
+                $(this.DivObjLui).css({ position: "absolute" });
 
                 this.DivObjLui.style.display = "block";
                 this.DivObjLoad.style.display = "block";
@@ -1535,7 +1550,7 @@ Ara.AraClass.Add('AraGrid', function (vAppId, vId, ConteinerFather) {
     }
 
     this.IsDestroyed = function () {
-        if (!document.getElementById(this.id)) 
+        if (!document.getElementById(this.id))
             return true;
         else
             return false;

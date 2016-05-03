@@ -1,1 +1,0 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Ara2.Dev.AraDesign.Edit._Default" validateRequest="false" %>

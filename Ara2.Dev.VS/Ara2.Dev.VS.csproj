@@ -158,6 +158,10 @@
       <Private>True</Private>
     </Reference>
     <Reference Include="UIAutomationTypes" />
+    <Reference Include="WebKit.Interop, Version=533.0.0.0, Culture=neutral, PublicKeyToken=b967213f6d29a3be">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="WebKitBrowser, Version=0.5.0.0, Culture=neutral, PublicKeyToken=b967213f6d29a3be, processorArchitecture=x86" />
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
