@@ -433,9 +433,13 @@ namespace Ara2.Dev.AraDesign.Edit.Service
                 foreach (var vObj in MainEdit.Edit.ObjetoSendoEditado.Where(a => a != MainEdit.Edit.Canvas).Select(a => (IAraObject)a).ToArray())
                 {
                     vObjsAll.Add(vObj);
-                    var vChills = MainEdit.Edit.GetAllChilds(vObj);
-                    if (vChills != null && vChills.Any())
-                        vObjsAll.AddRange(vChills);
+                    //AraDevComponent vAraDevComponent = (AraDevComponent)vObj.GetType().GetCustomAttributes(typeof(AraDevComponent)).FirstOrDefault();
+                    //if (vAraDevComponent == null || vAraDevComponent.Conteiner == true)
+                    //{
+                        var vChills = MainEdit.Edit.GetAllChilds(vObj);
+                        if (vChills != null && vChills.Any())
+                            vObjsAll.AddRange(vChills);
+                    //}
                 }
 
                 byte[] vTmp2 = new byte[] { };
@@ -463,12 +467,22 @@ namespace Ara2.Dev.AraDesign.Edit.Service
                 Sinc(() =>
                 {
                     var vObjPai = MainEdit.Edit.ObjetoSendoEditado.Single();
-
                     BinaryFormatter bf = new BinaryFormatter();
-                    var vObjs = ((object[])bf.Deserialize(new MemoryStream(vBytesObjects)));
+                    object[] vObjsTmp = new object[] { };
+                    object[] vObjs;
+                    try
+                    {
+                        AppDomain.CurrentDomain.AssemblyResolve += CurrentDomain_AssemblyResolve;
+                        vObjs = ((object[])bf.Deserialize(new MemoryStream(vBytesObjects)));
+                    }
+                    finally
+                    {
+                        AppDomain.CurrentDomain.AssemblyResolve -= CurrentDomain_AssemblyResolve;
+                    }
 
                     List<IAraDev> vObjsNew = new List<IAraDev>();
-                    foreach (var vObj in vObjs.Where(a => a is IAraDev))
+                    var ConteinerFatherInstanceID = ((IAraDev)vObjs.Where(a => a is IAraDev).First()).ConteinerFather.InstanceID;
+                    foreach (var vObj in vObjs.Where(a => a is IAraDev && ((IAraDev)a).ConteinerFather.InstanceID == ConteinerFatherInstanceID))
                     {
                         vObjsNew.Add(Copy((IAraDev)vObj, vObjPai, vObjs));
                     }
@@ -482,6 +496,40 @@ namespace Ara2.Dev.AraDesign.Edit.Service
             {
                 System.Diagnostics.Debug.Print("Erro PakServerAraDevEdit.Paste: " + err.ToDetailedString());
                 throw err;
+            }
+        }
+
+        bool AssemblyResolveExec = false;
+        Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
+        {
+            bool PrimeiroAssemblyResolveExec = false;
+            try
+            {
+                Assembly vTmp;
+                if (!AssemblyResolveExec)
+                {
+                    PrimeiroAssemblyResolveExec = true;
+                    AssemblyResolveExec = true;
+                    try
+                    {
+                        vTmp = AppDomain.CurrentDomain.Load((new AssemblyName(args.Name)).Name);
+                        if (vTmp != null)
+                            return vTmp;
+                    }
+                    catch { }
+                }
+
+
+                vTmp = MainEdit.Edit.References.Assemblys.Where(a => a.GetName().Name == (new AssemblyName(args.Name)).Name).FirstOrDefault();
+                if (vTmp != null)
+                    return vTmp;
+                else
+                    throw new Exception(args.Name + " not found");
+            }
+            finally
+            {
+                if (PrimeiroAssemblyResolveExec)
+                    AssemblyResolveExec = false;
             }
         }
 
@@ -504,10 +552,13 @@ namespace Ara2.Dev.AraDesign.Edit.Service
                      }
                  }
                  //vObjNew.Name = vObjPai.Name + "_" + vObjNew.InstanceID;
-
-                 foreach (var vObjFilho in vObjBase.Childs.Where(a => a is IAraDev).Select(a => (IAraDev)a))
+                 AraDevComponent vAraDevComponent =(AraDevComponent)vObjBase.GetType().GetCustomAttributes(typeof(AraDevComponent)).FirstOrDefault();
+                 if (vAraDevComponent == null || vAraDevComponent.Conteiner == true)
                  {
-                     Copy(vObjFilho, vObjNew);
+                     foreach (var vObjFilho in vObjBase.Childs.Where(a => a is IAraDev).Select(a => (IAraDev)a))
+                     {
+                         Copy(vObjFilho, vObjNew);
+                     }
                  }
              });
 

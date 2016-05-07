@@ -64,12 +64,8 @@
       <HintPath>..\packages\Ara2.AraDiv.1.0.0.2\lib\net40\Ara2.AraDiv.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Ara2.AraForeignKey, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ara2.AraForeignKey.1.0.0.0\lib\net40\Ara2.AraForeignKey.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Ara2.AraGrid, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ara2.AraGrid.1.0.0.4\lib\net40\Ara2.AraGrid.dll</HintPath>
+    <Reference Include="Ara2.AraGrid, Version=1.0.0.7, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ara2.AraGrid.1.0.0.7\lib\net40\Ara2.AraGrid.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Ara2.AraGridOfIcons, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
@@ -331,8 +327,6 @@
     <Content Include="Ara2\Components\AraWindow\CREDITS.md" />
     <Content Include="Ara2\Components\AraWindowTaskBar\LICENSE.md" />
     <Content Include="Ara2\Components\AraWindowTaskBar\CREDITS.md" />
-    <Content Include="Ara2\Components\AraForeignKeyLinq\LICENSE.md" />
-    <Content Include="Ara2\Components\AraForeignKeyLinq\CREDITS.md" />
     <Content Include="Ara2\Components\AraUpload\LICENSE.md" />
     <Content Include="Ara2\Components\AraUpload\CREDITS.md" />
     <Content Include="Ara2\Components\AraLabel\LICENSE.md" />

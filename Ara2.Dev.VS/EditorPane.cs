@@ -988,11 +988,17 @@ namespace Tecnomips.Ara2_Dev_VS
         {
             OleMenuCommand command = (OleMenuCommand)sender;
             var vFormat = DataFormats.GetFormat(DataFormats.Text);
-            var vData = System.Windows.Forms.Clipboard.GetData("iAraDev[]");
+            object vData;
+            try
+            {
+                vData = System.Windows.Forms.Clipboard.GetData("iAraDev[]");
+            }
+            catch { vData = null; }
             command.Enabled = vData!=null && editorControl.ServiceHost.Cliente.Channel(a => a.GetQueryPaste(vFormat.Id, vFormat.Name));
             //command.Enabled = editorControl.RichTextBoxControl.CanPaste(DataFormats.GetFormat(DataFormats.Text));
         }
 
+        DateTime onPasteAntMultEvent = DateTime.Now;
         /// <summary>
         /// Handler for our Paste command.
         /// </summary>
@@ -1000,20 +1006,26 @@ namespace Tecnomips.Ara2_Dev_VS
         /// <param name="e">  Not used.</param>
         public void onPaste(object sender=null, EventArgs e = null)
         {
-            try
+            if ((DateTime.Now - onPasteAntMultEvent).Seconds > 1)
             {
-                var vData = System.Windows.Forms.Clipboard.GetData("iAraDev[]");
-                if (vData != null)
+                onPasteAntMultEvent = DateTime.Now;
+                try
                 {
-                    editorControl.ServiceHost.Cliente.Channel(a => a.Paste((byte[])vData));
-                    System.Windows.Forms.Clipboard.SetData("iAraDev[]", null);
+                    lock (this)
+                    {
+                        var vData = System.Windows.Forms.Clipboard.GetData("iAraDev[]");
+                        if (vData != null)
+                        {
+                            editorControl.ServiceHost.Cliente.Channel(a => a.Paste((byte[])vData));
+                            //System.Windows.Forms.Clipboard.SetData("iAraDev[]", null);
+                        }
+                    }
+                }
+                catch (Exception err)
+                {
+                    MessageBox.Show("Erro ao colar.\n" + err.Message);
                 }
             }
-            catch (Exception err)
-            {
-
-            }
-
         }
 
         ///// <summary>

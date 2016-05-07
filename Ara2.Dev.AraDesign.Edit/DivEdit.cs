@@ -7,6 +7,7 @@ using Ara2.Components;
 using System.IO;
 using Ara2.Dev;
 using Ara2.Dev.AraDesign.Edit.Service;
+using System.Reflection;
 
 namespace Ara2.Dev.AraDesign.Edit
 {
@@ -36,7 +37,7 @@ namespace Ara2.Dev.AraDesign.Edit
 
         }
 
-        AraDesignProjectReferences References=null;
+        public AraDesignProjectReferences References=null;
         FileInfo _FileProject;
         public FileInfo FileProject
         {
@@ -134,7 +135,7 @@ namespace Ara2.Dev.AraDesign.Edit
             return TmpR.ToArray();
         }
 
-        public IAraObject[] GetAllChilds(IAraObject vObjPai)
+        public IAraObject[] GetAllChilds(IAraObject vObjPai,bool ConteinerChilds =true)
         {
             List<IAraObject> TmpR = new List<IAraObject>();
 
@@ -147,7 +148,15 @@ namespace Ara2.Dev.AraDesign.Edit
 
             foreach (IAraObject TmpObj in vObjPai.Childs)
             {
-                TmpR.AddRange(GetAllChilds(TmpObj));
+                bool CopyChilds = true;
+                if (!ConteinerChilds)
+                {
+                    AraDevComponent vAraDevComponent = (AraDevComponent)TmpObj.GetType().GetCustomAttributes(typeof(AraDevComponent)).FirstOrDefault();
+                    CopyChilds = vAraDevComponent == null || vAraDevComponent.Conteiner == true;
+                }
+
+                if (CopyChilds)
+                    TmpR.AddRange(GetAllChilds(TmpObj, CopyChilds));
             }
 
             return TmpR.ToArray();
