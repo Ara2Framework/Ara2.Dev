@@ -14,7 +14,7 @@
     <ErrorReportUrlHistory />
     <FallbackCulture>en-US</FallbackCulture>
     <VerifyUploadedFiles>false</VerifyUploadedFiles>
-    <ProjectView>ShowAllFiles</ProjectView>
+    <ProjectView>ProjectFiles</ProjectView>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <StartProgram>C:\Program Files %28x86%29\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe</StartProgram>

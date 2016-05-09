@@ -1894,28 +1894,28 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>03/22/2016 15:17:17</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/AraGrid.js">
-      <publishTime>05/06/2016 23:07:15</publishTime>
+      <publishTime>05/09/2016 14:48:53</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/CREDITS.md">
-      <publishTime>05/06/2016 23:07:15</publishTime>
+      <publishTime>05/09/2016 14:48:53</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/files/grid_locale-pt-br.js">
-      <publishTime>05/06/2016 23:07:15</publishTime>
+      <publishTime>05/09/2016 14:48:53</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/files/jquery_jqGrid_min.js">
-      <publishTime>05/06/2016 23:07:15</publishTime>
+      <publishTime>05/09/2016 14:48:53</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/files/jquery_jqGrid_src.js">
-      <publishTime>05/06/2016 23:07:15</publishTime>
+      <publishTime>05/09/2016 14:48:53</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/files/ui_jqgrid.css">
-      <publishTime>05/06/2016 23:07:15</publishTime>
+      <publishTime>05/09/2016 14:48:53</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/files/ui_jqgrid_Ara2.css">
-      <publishTime>05/06/2016 23:07:15</publishTime>
+      <publishTime>05/09/2016 14:48:53</publishTime>
     </File>
     <File Include="Ara2/Components/AraGrid/LICENSE.md">
-      <publishTime>05/06/2016 23:07:15</publishTime>
+      <publishTime>05/09/2016 14:48:53</publishTime>
     </File>
     <File Include="Ara2/Components/AraGridOfIcons/AraGridOfIcons.js">
       <publishTime>04/18/2016 16:14:28</publishTime>
@@ -2038,10 +2038,10 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2016 16:14:36</publishTime>
     </File>
     <File Include="Ara2/Components/AraTextBox/AraTextBox.js">
-      <publishTime>05/03/2016 10:51:30</publishTime>
+      <publishTime>05/09/2016 14:48:51</publishTime>
     </File>
     <File Include="Ara2/Components/AraTextBox/CREDITS.md">
-      <publishTime>05/03/2016 10:51:30</publishTime>
+      <publishTime>05/09/2016 14:48:51</publishTime>
     </File>
     <File Include="Ara2/Components/AraTextBox/files/jquery-ui-timepicker-addon.css">
       <publishTime>04/14/2016 09:50:10</publishTime>
@@ -2056,7 +2056,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/14/2016 09:50:10</publishTime>
     </File>
     <File Include="Ara2/Components/AraTextBox/LICENSE.md">
-      <publishTime>05/03/2016 10:51:30</publishTime>
+      <publishTime>05/09/2016 14:48:51</publishTime>
     </File>
     <File Include="Ara2/Components/AraTimer/AraTimer.js">
       <publishTime>04/18/2016 16:14:38</publishTime>
@@ -2305,7 +2305,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/25/2016 08:30:22</publishTime>
     </File>
     <File Include="bin/Ara2.AraGrid.dll">
-      <publishTime>05/04/2016 08:01:34</publishTime>
+      <publishTime>05/09/2016 08:55:02</publishTime>
     </File>
     <File Include="bin/Ara2.AraGridOfIcons.dll">
       <publishTime>04/18/2016 08:54:50</publishTime>
@@ -2344,7 +2344,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/18/2016 10:22:32</publishTime>
     </File>
     <File Include="bin/Ara2.AraTextBox.dll">
-      <publishTime>04/28/2016 15:38:30</publishTime>
+      <publishTime>05/08/2016 11:32:48</publishTime>
     </File>
     <File Include="bin/Ara2.AraTimer.dll">
       <publishTime>04/17/2016 18:17:22</publishTime>
@@ -2359,7 +2359,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/29/2016 10:04:36</publishTime>
     </File>
     <File Include="bin/Ara2.Dev.AraDesign.Edit.dll">
-      <publishTime>05/07/2016 10:37:31</publishTime>
+      <publishTime>05/09/2016 14:49:07</publishTime>
     </File>
     <File Include="bin/Ara2.Dev.AraDesign.Edit.Service.dll">
       <publishTime>04/29/2016 10:04:34</publishTime>
@@ -2392,7 +2392,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/15/2016 18:29:44</publishTime>
     </File>
     <File Include="packages.config">
-      <publishTime>05/06/2016 23:07:23</publishTime>
+      <publishTime>05/09/2016 14:48:53</publishTime>
     </File>
     <File Include="Web.config">
       <publishTime>04/20/2016 08:11:49</publishTime>
